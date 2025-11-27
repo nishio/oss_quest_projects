@@ -45,6 +45,7 @@
   "category": "Open Source" | "Open Data" | "Open Government",
   "one_liner": "120文字以内の簡潔な要約",
   "description": "詳細な説明（技術者・非技術者の両方に分かりやすく）",
+  "why_japan": "なぜこのプロジェクトが日本版カタログに入るのか（日本との関わり）",
   "links": {
     "homepage": "https://...",  // オプション
     "github": "https://github.com/...",  // オプション
@@ -52,6 +53,11 @@
   }
 }
 ```
+
+**重要**:
+- `title`、`one_liner`、`description`は**カードに表示される情報**
+- `why_japan`は**<hr/>で区切って下部に表示**される詳細情報（空欄の場合は非表示）
+- `links`はカードの最下部に表示
 
 ### 将来のゲーム用構造（予定）
 

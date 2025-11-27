@@ -164,8 +164,24 @@
         .project-description {
             color: #666;
             margin-bottom: 20px;
-            flex-grow: 1;
             line-height: 1.7;
+        }
+
+        .project-divider {
+            border: none;
+            border-top: 1px solid #e0e0e0;
+            margin: 15px 0;
+        }
+
+        .project-why-japan {
+            color: #555;
+            font-size: 0.95em;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            font-style: italic;
         }
 
         .project-links {
@@ -359,6 +375,18 @@
                 links.push(`<a href="${project.links.docs}" class="project-link link-docs" target="_blank">📚 ドキュメント</a>`);
             }
 
+            // why_japanセクションの生成（空欄でない場合のみ）
+            let whyJapanSection = '';
+            if (project.why_japan && project.why_japan.trim() !== '') {
+                whyJapanSection = `
+                    <hr class="project-divider">
+                    <div class="project-why-japan">
+                        💡 <strong>なぜ日本版に？</strong><br>
+                        ${project.why_japan}
+                    </div>
+                `;
+            }
+
             card.innerHTML = `
                 <div class="project-header">
                     <div class="project-title">${project.title}</div>
@@ -366,6 +394,7 @@
                 </div>
                 <div class="project-oneliner">${project.one_liner}</div>
                 <div class="project-description">${project.description}</div>
+                ${whyJapanSection}
                 <div class="project-links">
                     ${links.join('')}
                 </div>
