@@ -1,0 +1,61 @@
+```json
+{
+  "Open Source": [
+    "Optuna",
+    "Misskey",
+    "Fluentd",
+    "Ruby",
+    "mruby",
+    "CuPy",
+    "Chainer",
+    "NNabla",
+    "MeCab",
+    "Sudachi",
+    "SentencePiece",
+    "GiNZA",
+    "Mozc",
+    "Embulk",
+    "Digdag",
+    "Apache Hivemall",
+    "Julius",
+    "OpenToonz",
+    "VRM / UniVRM",
+    "OpenSiv3D",
+    "waifu2x",
+    "CKAN",
+    "YaneuraOu",
+    "OpenRTM-aist",
+    "Open JTalk",
+    "VOICEVOX",
+    "Jibungoto Planet"
+  ],
+  "Open Data": [
+    "政府オープンデータ（data.go.jp）",
+    "自治体標準オープンデータセット",
+    "地方公共団体向けオープンデータパッケージ",
+    "e-Gov法令API v2",
+    "国会・府省会議 議事録メタデータ（NISTEP）",
+    "SmartNews 国会議案データ（公開リポジトリ）",
+    "Where Does My Money Go?（spending.jp）",
+    "GTFS-JP",
+    "TokyoGTFS",
+    "Safecast",
+    "GSI Maps（地理院地図）",
+    "Polimoney"
+  ],
+  "Open Government": [
+    "Decidim Japan",
+    "FixMyStreet Japan",
+    "東京都 新型コロナ対策サイト",
+    "sinsai.info",
+    "広聴AI (Kouchou-AI)",
+    "いどばた (Idobata)"
+  ]
+}
+```
+
+※ 迷いどころ（必要なら入れ替え可）
+
+* **Kouchou-AI/Idobata** はOSSでもありますが、主用途が参加・合意形成のため **Open Government** に置きました。
+* **Polimoney / WDMMG / GSI Maps / e-Gov法令API** は主にデータ公開・再利用の文脈で **Open Data** に寄せています。
+* **CKAN** はデータ基盤向けですがソフトウェアとして **Open Source** に分類。

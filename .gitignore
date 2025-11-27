@@ -1,10 +1,12 @@
-# macOS
-.DS_Store
+# cloneした台湾版リポジトリは除外
+open-star-ter-village/
 
-# Editor
+# システムファイル
+.DS_Store
+*.swp
+*.swo
+*~
+
+# エディタ設定
 .vscode/
 .idea/
-
-# Temporary files
-*.tmp
-*.log

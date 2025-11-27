@@ -1,0 +1,789 @@
+Open StarTer Villageのprojectカードの情報はある？
+
+あります。公開のリポジトリは OCF (Open Culture Foundation) のこちらです。
+
+https://github.com/ocftw/open-star-ter-village
+
+
+OCFのGitHub上で公開されています。 
+GitHub
+
+「projectカード」の公式説明・一覧はここにまとまっています（全39枚。Open Government／Open Data／Open Source の系統で、例：Democracy OS、vTaiwan、Common Voice など）。
+
+https://openstartervillage.ocf.tw/en/cards/
+
+
+掲載例やカテゴリの説明もこのページにあります。 
+openstartervillage.ocf.tw
+
+必要なら、このページからカード一覧を抽出してCSV/JSONに整形して渡せます。
+
+これらの情報を参考にして日本語版を作りたい
+日本語版サイトを作りたいという意味ではなく、　日本人の関わっているOSSプロジェクトを紹介したい
+
+
+いいですね。「日本人が関わっているOSS」をカード形式で紹介するための最小フォーマットと、まず載せたい代表プロジェクト案をサッと出します。必要ならこのままJSONで量産できます。
+
+カード設計（最小）
+
+title: プロジェクト名
+
+one_liner: 120字以内の要約
+
+category: 例）Language / ML / NLP / DevOps / Robotics / Creator / Fediverse …
+
+lead: 主要な日本人/日本組織（わかる範囲で）
+
+maturity: Incubating / Growing / Mature / Archived
+
+license
+
+links: { homepage, github, docs }
+
+why_jp: 「日本との関わり（人・企業・大学など）」
+
+contrib: 初心者向け貢献ポイント（Good first issue、ドキュメント等）
+
+sources: 公式や一次情報URL（出典）
+
+サンプル（3枚・JSON）
+[
+  {
+    "title": "Optuna",
+    "one_liner": "ハイパーパラメータ最適化フレームワーク。v4で分散最適化とOptunaHubを公式提供。",
+    "category": "ML",
+    "lead": "Preferred Networks",
+    "maturity": "Mature",
+    "license": "Apache-2.0",
+    "links": {
+      "homepage": "https://optuna.org",
+      "github": "https://github.com/optuna/optuna",
+      "docs": "https://optuna.readthedocs.io/"
+    },
+    "why_jp": "PFN主導で公開。国内外で広く利用。",
+    "contrib": "チュートリアル改善・Sampler/Pruner実装・Examples追加",
+    "sources": ["https://www.preferred.jp/en/news/pr20240902/"]
+  },
+  {
+    "title": "Misskey",
+    "one_liner": "日本発の分散型SNS（ActivityPub）。多機能UIとリアクションで国内ユーザーに人気。",
+    "category": "Fediverse",
+    "lead": "syuilo（篠田英治）",
+    "maturity": "Mature",
+    "license": "AGPL-3.0",
+    "links": {
+      "homepage": "https://misskey-hub.net/ja/",
+      "github": "https://github.com/misskey-dev/misskey",
+      "docs": "https://misskey-hub.net/ja/docs/"
+    },
+    "why_jp": "2014年に日本で開発開始、現在も活発。",
+    "contrib": "翻訳、フロント改善、ドキュメント、プラグイン",
+    "sources": ["https://misskey-hub.net/ja/docs/about-misskey/", "https://en.wikipedia.org/wiki/Misskey"]
+  },
+  {
+    "title": "Fluentd",
+    "one_liner": "ログ収集基盤の定番。CNCF卒業プロジェクトで大規模運用に実績。",
+    "category": "DevOps / Data",
+    "lead": "Sadayuki Furuhashi 他（Treasure Data発）",
+    "maturity": "Mature",
+    "license": "Apache-2.0",
+    "links": {
+      "homepage": "https://www.fluentd.org/",
+      "github": "https://github.com/fluent/fluentd",
+      "docs": "https://docs.fluentd.org/"
+    },
+    "why_jp": "日本人開発者が創始。CNCF卒業として認定。",
+    "contrib": "プラグイン作成、運用ガイド、ベンチマーク",
+    "sources": ["https://www.cncf.io/announcements/2019/04/11/cncf-announces-fluentd-graduation/", "https://www.fluentd.org/blog/fluentd-cncf-graduation"]
+  }
+]
+
+
+出典: Optuna v4とOptunaHub公式発表（2024/09/02）。 
+株式会社Preferred Networks
+／Misskey概要と沿革。 
+Misskey
++1
+／FluentdのCNCF卒業。 
+CNCF
++1
+
+ファースト・バッチ候補（15件）
+
+Language / Runtime
+
+Ruby / mruby：日本発言語と軽量実装。組込みやツールで現役。 
+ウィキペディア
++1
+
+ML / AI
+
+CuPy：NumPy/SciPy互換のGPUアレイ。PFNとコミュニティで維持。MIT。 
+GitHub
+
+Chainer（メンテ段階）：Define-by-Runの先駆。2019年に開発終了発表。 
+Chainer
++1
+
+NNabla：SonyのDLフレームワーク（Apache-2.0）。 
+GitHub
++1
+
+Optuna：上のサンプル参照。 
+株式会社Preferred Networks
+
+NLP（日本語）
+
+MeCab：形態素解析の定番（京大×NTT、Taku Kudo氏）。 
+taku910.github.io
+
+Sudachi / Sudachi.rs：業務志向の日本語トークナイザ。 
+GitHub
+
+SentencePiece：言語非依存サブワード分割（Taku Kudo氏、Google発OSS）。 
+GitHub
+
+GiNZA：spaCyベースの日本語NLPモデル群（Megagon Labs）。 
+GitHub
++1
+
+Mozc：Google日本語入力のOSS版。複数OS対応。 
+GitHub
+
+DevOps / Data
+
+Fluentd：上のサンプル参照。 
+CNCF
+
+Embulk：プラグイン式のバルクデータローダ。Treasure Data由来。 
+Treasure Data API Portal
+
+Digdag：YAMLで書けるワークフローエンジン。 
+digdag.io
+
+Hivemall：SQLでMLが書けるApache Incubator案件。 
+hivemall.github.io
++1
+
+Robotics / Speech / Creator / Fediverse
+
+Julius：日本発のLVCSR音声認識エンジン（NITech）。 
+GitHub
++1
+
+OpenToonz：ドワンゴがOSS化、ジブリ版Toonz由来の2D制作ソフト。 
+OpenToonz
+
+VRM / UniVRM：日本発の3Dアバター規格とUnity実装。 
+vrm-consortium.org
++1
+
+OpenSiv3D：国産C++クリエイティブコーディング。MIT。 
+siv3d.github.io
+
+waifu2x：アニメ絵向け超解像。 
+GitHub
+
+Misskey：上のサンプル参照。 
+Misskey
+
+ここから先は、ニッチ分野（将棋エンジンYaneuraOu、ロボットRTミドルウェア、音声合成Open JTalk/VOICEVOXなど）も拡張候補です。 
+GitHub
++3
+ウィキペディア
++3
+openrtm.github.io
++3
+
+集め方（再現可能なキュレーション手順）
+
+スコープ定義
+
+「日本人が関与」= ①日本人が主要開発者 / コアメンテナ、②日本企業・大学が主導、③日本語圏コミュニティが活発（いずれか）。
+
+一次情報優先で確認
+
+公式サイト／GitHub／財団・学会の発表（例：CNCF卒業、企業のニュースリリース、大学ページ）。
+
+発見チャネル
+
+Awesome系リスト（日本語NLPなど）→絞り込み。 
+GitHub
++1
+
+財団・コンソーシアム（CNCF、VRM Consortiumなど）での採択・仕様化。 
+CNCF
++1
+
+選定基準（暫定）
+
+最終更新が≦18か月以内、ダウンロードやスターだけでなくリリース頻度/Issue応答も確認。
+
+ライセンス明確（OSSライセンス）、ドキュメント有、貢献導線（CONTRIBUTING、Good first issue）あり。
+
+カード化→公開
+
+上のJSONスキーマでPR受付。タグ（カテゴリ/領域/技術スタック/貢献難度）で検索しやすく。
+
+「なぜ日本の関わりが重要か」を短く添える（人材育成／コミュニティ拡大／採用事例）。
+
+すぐの次アクション（提案）
+
+この15件で初版カードを作成 → 1ページまとめ＋JSON公開。
+
+次に「分野別特集」：
+
+日本語NLP（MeCab/Sudachi/SentencePiece/GiNZA/Mozc…）
+
+MLOps/Data（Fluentd/Embulk/Digdag/Hivemall/Optuna/CuPy）
+
+Creator/Metaverse（OpenToonz/VRM/UniVRM/OpenSiv3D/waifu2x）
+
+Robotics/Speech（Julius、OpenRTM、Open JTalk、VOICEVOX など）
+
+この方向でよければ、上の15件をカードJSONに起こしてお渡しします（追って増やせます）。
+
+
+Civic TechとかOpen Data / Open Governmentとかのものをもっと編んだしして
+
+いいですね。**Civic Tech／Open Data／Open Government**に絞って、日本発 or 日本で強く関与しているプロジェクトをカテゴリ別に“カード候補”として増やしました（1～2行解説＋貢献ポイント付き）。必要ならこのままJSON化して渡します。
+
+# 参加・合意形成 / Civic Tech
+
+* **Decidim（日本展開）** — オープンソースの参加型民主主義プラットフォーム。Code for Japanが国内初の公式パートナーで、日本語化・導入支援を継続（導入30件超の実績）。貢献: 日本語ドキュメント／テーマ実装／事例集。 ([プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES][1])
+* **Jibungoto Planet（自分ごとプラネット）** — 個人のカーボンフットプリント可視化アプリ。NIES×Code for JapanによるOSS化。貢献: 翻訳・UI改善・行動提案のデータ拡充。 ([directory.civictech.guide][2])
+* **Where Does My Money Go?（spending.jp）** — 「税金はどこへ行った？」自治体版を量産できるOSS。復活プロジェクトも進行。貢献: 各自治体データ整備／COFOG対応／テンプレ刷新。 ([spending.jp][3])
+* **FixMyStreet Japan** — 道路穴や不法投棄などを通報し行政と連携。ベースはmySocietyのAGPL OSS。貢献: 日本向けUI／Open311連携／導入自治体の成果可視化。 ([atmarkit.itmedia.co.jp][4])
+
+# オープンデータ / オープンガバメント基盤
+
+* **e-Govデータポータル（旧DATA.GO.JP統合）** — 行政オープンデータの横断検索・全文検索を提供。CKAN API準拠。貢献: 利用ガイドやSDK、データ品質レポート。 ([Impress Watch][5])
+* **CKAN（日本の多数ポータルで採用）** — データカタログOSS。data.go.jpの基盤にも採用されてきた。貢献: 日本語拡張・自治体向けプラグイン。 ([GitHub][6])
+* **自治体標準オープンデータセット（正式版）** — データ形式・項目の標準化指針。貢献: 変換ツールの改善／標準遵守の検証スクリプト。 ([デジタル庁][7])
+* **地方公共団体向けオープンデータパッケージ（OSS）** — カタログ＋ダッシュボードの配布物。貢献: 令和版テンプレ更新／クラウド導入手順。 ([cio.go.jp][8])
+* **法令API v2（e-Gov法令検索）** — 2025/03/19リリース。時点指定取得など機能拡充。貢献: SDK・サンプル、テキスト正規化。 ([e-Gov 法令検索][9])
+* **NISTEP「国会・府省会議 議事録メタデータ」** — *.go.jp横断の議事録メタデータをGitHub公開。貢献: 最新URL検証／JSONスキーマ整備。 ([nistep.go.jp][10])
+* **SmartNews 国会議案DB（オープンデータ）** — 過去20年分の議案データを整理して無償公開。貢献: 差分検出・可視化・API化。 ([ITmedia][11])
+
+# 危機対応・保健
+
+* **東京都 新型コロナ対策サイト（OSS）** — Vue/Nuxt製でMITライセンス。全国に派生。貢献: 派生版のアーカイブ／再利用テンプレ。 ([プレスリリース・ニュースリリース配信シェアNo.1｜PR TIMES][12])
+* **sinsai.info（2011 震災危機マッピング）** — Ushahidiベース。OSM日本コミュニティ中心に運用、1か月で9千件超の報告集約。貢献: 記録の再編／教訓ドキュメント化。 ([ushahidi.com][13])
+
+# 地図・交通
+
+* **GSI Maps（地理院地図のソース公開）** — 国土地理院が本体のソースをBSD-2-Clauseで公開。貢献: レイヤ編集／事例集。 ([GitHub][14])
+* **GTFS-JP（標準的なバス情報フォーマット）** — 日本向けGTFS拡張と普及。貢献: バリデータ／作成ガイドの改善。 ([gtfs.jp][15])
+* **TokyoGTFS** — 首都圏の鉄道・一部バスのGTFS生成ツール。貢献: 事業者拡張／CIでの定期ビルド。 ([GitHub][16])
+
+# 環境・市民科学
+
+* **Safecast** — 放射線・大気質データをCC0で継続公開（AWS公開データにも登録）。貢献: データ同化・可視化・QA。 ([safecast.org][17])
+
+---
+
+## カード用フィールド（最小）
+
+`title / one_liner / category / lead / maturity / license_or_policy / links{homepage,github,docs} / why_jp / contrib / sources[]`
+
+> 例（3件だけJSON化）
+
+```json
+[
+  {
+    "title": "Decidim Japan",
+    "one_liner": "参加型民主主義プラットフォームの日本展開（CFJが公式パートナー）。",
+    "category": "Civic Tech / Open Government",
+    "lead": "Code for Japan",
+    "maturity": "Growing",
+    "license_or_policy": "AGPL-3.0",
+    "links": {
+      "homepage": "https://www.code4japan.org/activity/decidim",
+      "github": "https://decidim.org/"
+    },
+    "why_jp": "国内30件超の導入・検証実績、自治体案件での検討多数。",
+    "contrib": "日本語ドキュメント、テーマ実装、運用事例の共有",
+    "sources": ["turn9search0","turn9search1","turn9search2","turn9search3"]
+  },
+  {
+    "title": "Where Does My Money Go?（spending.jp）",
+    "one_liner": "1日あたりの税金の使途を可視化する自治体横展開型OSS。",
+    "category": "Open Data / Fiscal Transparency",
+    "lead": "市民有志（復活PJ）",
+    "maturity": "Revived",
+    "license_or_policy": "Open Definition準拠（サイト群）",
+    "links": {
+      "homepage": "https://spending.jp/"
+    },
+    "why_jp": "2012年から自治体クローンが多数。2021年に再起動。",
+    "contrib": "COFOG整備、テンプレ再設計、各自治体データ投入",
+    "sources": ["turn1search0","turn16search1","turn16search4"]
+  },
+  {
+    "title": "e-Govデータポータル",
+    "one_liner": "行政機関のオープンデータ横断検索（CKAN API準拠）。",
+    "category": "Open Data Infrastructure",
+    "lead": "デジタル庁",
+    "maturity": "Mature",
+    "license_or_policy": "各データの利用規約に従う",
+    "links": {
+      "homepage": "https://www.digital.go.jp/en/resources/open_data"
+    },
+    "why_jp": "旧data.go.jpを統合し、全文検索などを強化。",
+    "contrib": "SDKやサンプル、利用ガイド、メタデータ品質検査",
+    "sources": ["turn13search6","turn10search2"]
+  }
+]
+```
+
+---
+
+## 次の一手（すぐできる）
+
+1. 上の候補から**10件を初版カード**としてJSON化→GitHubに置く。
+2. **タグ設計**を追加（例: `domain: ["participation","transport","health","fiscal"]`, `artifact: ["platform","data","standard"]`, `license`, `gov_level: ["national","pref","city"]`）。
+3. 各カードに**貢献導線**（Issues/フォーラム/Slack/ML/ハッカソン）を1クリックで貼る。
+
+「この10件をまずJSON化して」と言ってくれれば、すぐ出します。
+
+[1]: https://prtimes.jp/main/html/rd/p/000000063.000039198.html?utm_source=chatgpt.com "Code for Japan、参加型民主主義プラットフォームDecidimの日本初公式パートナーに | 一般社団法人　コード・フォー・ジャパンのプレスリリース"
+[2]: https://directory.civictech.guide/listing/jibungoto-planet?utm_source=chatgpt.com "Project - Jibungoto Planet"
+[3]: https://spending.jp/?utm_source=chatgpt.com "税金はどこへ行った？ - WHERE DOES MY MONEY GO? -"
+[4]: https://atmarkit.itmedia.co.jp/ait/articles/1807/06/news094.html?utm_source=chatgpt.com "オープンガバメントツール「FixMyStreet Japan」で“街づくりのデータドリブン”を加速――NTTデータ経営研究所とダッピスタジオが協働推進 - ＠IT"
+[5]: https://www.watch.impress.co.jp/docs/news/1490187.html?utm_source=chatgpt.com "行政のオープンデータを集約した「e-Govデータポータル」公開 - Impress Watch"
+[6]: https://github.com/ckan/ckan?utm_source=chatgpt.com "GitHub - ckan/ckan: CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data. It powers catalog.data.gov, open.canada.ca/data, data.humdata.org among many other sites."
+[7]: https://www.digital.go.jp/resources/open_data/municipal-standard-data-set-test?utm_source=chatgpt.com "自治体標準オープンデータセット（正式版）｜デジタル庁"
+[8]: https://cio.go.jp/node/2350/index.html?utm_source=chatgpt.com "「地方公共団体向けオープンデータパッケージ」がGitHub上に公開されました。 | 政府CIOポータル"
+[9]: https://laws.e-gov.go.jp/news/?utm_source=chatgpt.com "お知らせ | e-Gov法令検索"
+[10]: https://www.nistep.go.jp/archives/35962?utm_source=chatgpt.com "「国会会議録・政府関係会議議事録等メタデータセット」の公表について | 科学技術・学術政策研究所 (NISTEP)"
+[11]: https://www.itmedia.co.jp/news/articles/2207/01/news129.html?utm_source=chatgpt.com "スマートニュース、国会議案データベースを無償公開　過去20年分をGitHubで - ITmedia NEWS"
+[12]: https://prtimes.jp/main/html/rd/p/000000007.000039198.html?utm_source=chatgpt.com "東京都新型コロナウイルス感染症対策サイトを開発 | 一般社団法人　コード・フォー・ジャパンのプレスリリース"
+[13]: https://www.ushahidi.com/about/blog/crisis-mapping-japan?utm_source=chatgpt.com "Ushahidi - Crisis Mapping Japan"
+[14]: https://github.com/gsi-cyberjapan/gsimaps?utm_source=chatgpt.com "GitHub - gsi-cyberjapan/gsimaps: The source of GSI Maps (https://maps.gsi.go.jp/)"
+[15]: https://www.gtfs.jp/?utm_source=chatgpt.com "GTFS.JP"
+[16]: https://github.com/MKuranowski/TokyoGTFS?utm_source=chatgpt.com "GitHub - MKuranowski/TokyoGTFS: Create GTFS data for Tokyo public transportation"
+[17]: https://safecast.org/data/?utm_source=chatgpt.com "Data – Safecast"
+
+
+title, one_liner, description(詳細な説明), links でよいです。 Civic Techに絞らずにここまでに出てきたものを全部JSON化して
+
+```json
+[
+  {
+    "title": "Optuna",
+    "one_liner": "機械学習のハイパーパラメータ最適化フレームワーク。",
+    "description": "Python中心に使える最適化ツールで、Sampler/Prunerなど拡張点が明確。実験管理や分散実行の実装例が豊富で、研究から実運用まで幅広く利用されている。",
+    "links": {
+      "homepage": "https://optuna.org",
+      "github": "https://github.com/optuna/optuna",
+      "docs": "https://optuna.readthedocs.io/"
+    }
+  },
+  {
+    "title": "Misskey",
+    "one_liner": "日本発のActivityPub対応分散SNS。",
+    "description": "リアクションや豊富なカスタマイズ性を備えたFediverseクライアント/サーバ。国内外で多数のインスタンスが稼働し、拡張エコシステムも活発。",
+    "links": {
+      "homepage": "https://misskey-hub.net/ja/",
+      "github": "https://github.com/misskey-dev/misskey",
+      "docs": "https://misskey-hub.net/ja/docs/"
+    }
+  },
+  {
+    "title": "Fluentd",
+    "one_liner": "ログ収集・ルーティングのデファクトOSS。",
+    "description": "プラグインであらゆる入力/出力に対応するデータコレクタ。クラウド/オンプレを問わず、サーバ観測やデータ基盤の中核として採用されている。",
+    "links": {
+      "homepage": "https://www.fluentd.org/",
+      "github": "https://github.com/fluent/fluentd",
+      "docs": "https://docs.fluentd.org/"
+    }
+  },
+  {
+    "title": "Ruby",
+    "one_liner": "日本発の汎用プログラミング言語。",
+    "description": "『書いていて楽しい』を重視した動的言語。Railsをはじめ豊富なライブラリ群とコミュニティに支えられ、Webやスクリプト自動化で広く使われる。",
+    "links": {
+      "homepage": "https://www.ruby-lang.org/ja/",
+      "github": "https://github.com/ruby/ruby",
+      "docs": "https://docs.ruby-lang.org/ja/"
+    }
+  },
+  {
+    "title": "mruby",
+    "one_liner": "組込み向けの軽量Ruby実装。",
+    "description": "小さなフットプリントでRubyの楽しさをそのままに、IoT/家電/ゲーム等の組込み用途で利用可能。C/C++と併用しやすい構成が特徴。",
+    "links": {
+      "github": "https://github.com/mruby/mruby"
+    }
+  },
+  {
+    "title": "CuPy",
+    "one_liner": "NumPy/SciPy互換のGPU配列ライブラリ。",
+    "description": "CUDA/ROCm上でNumPy APIライクにGPU計算を実行。多くの科学技術計算やMLで高速化の置き換え先として利用される。",
+    "links": {
+      "homepage": "https://cupy.dev/",
+      "github": "https://github.com/cupy/cupy",
+      "docs": "https://docs.cupy.dev/"
+    }
+  },
+  {
+    "title": "Chainer",
+    "one_liner": "Define-by-Runの先駆的DLフレームワーク。",
+    "description": "研究用途で広く使われた歴史的プロジェクト。現在はメンテナンス中心だが、Define-by-Run思想は多くの後続フレームワークに影響を与えた。",
+    "links": {
+      "homepage": "https://chainer.org/",
+      "github": "https://github.com/chainer/chainer"
+    }
+  },
+  {
+    "title": "NNabla",
+    "one_liner": "Sony製のディープラーニングフレームワーク。",
+    "description": "学習・推論・モデル変換ツールを含むエコシステムを提供。組込みやオンデバイス推論も視野に、実運用での活用事例がある。",
+    "links": {
+      "homepage": "https://nnabla.org/",
+      "github": "https://github.com/sony/nnabla",
+      "docs": "https://nnabla.readthedocs.io/"
+    }
+  },
+  {
+    "title": "MeCab",
+    "one_liner": "日本語形態素解析の定番ツール。",
+    "description": "辞書を差し替えて多様な用途に対応。テキスト前処理の基盤として長年利用され、学術・産業の双方で実績がある。",
+    "links": {
+      "homepage": "https://taku910.github.io/mecab/",
+      "github": "https://github.com/taku910/mecab"
+    }
+  },
+  {
+    "title": "Sudachi（family）",
+    "one_liner": "業務志向の日本語形態素解析器と派生実装群。",
+    "description": "本体（Java）に加え、Python版（SudachiPy）やRust版（Sudachi.rs）など派生が存在。品詞体系と辞書設計が実務で扱いやすい。",
+    "links": {
+      "github": "https://github.com/WorksApplications/Sudachi"
+    }
+  },
+  {
+    "title": "SentencePiece",
+    "one_liner": "言語非依存のサブワード分割ツール。",
+    "description": "BPE/Unigram等のアルゴリズムを提供し、多言語の前処理を統一。大規模言語モデルのトークナイズに広く使われる。",
+    "links": {
+      "github": "https://github.com/google/sentencepiece"
+    }
+  },
+  {
+    "title": "GiNZA",
+    "one_liner": "spaCyベースの日本語NLPモデル群。",
+    "description": "日本語の形態素解析・依存解析・固有表現抽出を高精度で提供。シンプルなAPIでプロトタイピングから実装まで扱いやすい。",
+    "links": {
+      "homepage": "https://megagonlabs.github.io/ginza/",
+      "github": "https://github.com/megagonlabs/ginza"
+    }
+  },
+  {
+    "title": "Mozc",
+    "one_liner": "Google日本語入力のOSS版。",
+    "description": "変換エンジンや辞書を含む日本語入力システム。クロスプラットフォームに対応し、派生プロジェクトも多数。",
+    "links": {
+      "github": "https://github.com/google/mozc"
+    }
+  },
+  {
+    "title": "Embulk",
+    "one_liner": "プラグイン式のバルクデータローダ。",
+    "description": "YAMLで定義し、各種DB/ストレージ間のデータ移送を自動化。ジョブの再実行やリトライに強く、ETLの土台として使いやすい。",
+    "links": {
+      "homepage": "https://www.embulk.org/",
+      "github": "https://github.com/embulk/embulk",
+      "docs": "https://www.embulk.org/docs/"
+    }
+  },
+  {
+    "title": "Digdag",
+    "one_liner": "シンプルな記法で書けるワークフローエンジン。",
+    "description": "YAML中心の記述でジョブをスケジューリング。Airflow等とも相互補完的に使われ、クラウド連携の事例が多い。",
+    "links": {
+      "homepage": "https://www.digdag.io/",
+      "github": "https://github.com/treasure-data/digdag",
+      "docs": "https://docs.digdag.io/"
+    }
+  },
+  {
+    "title": "Apache Hivemall",
+    "one_liner": "SQLで機械学習を実現する拡張ライブラリ。",
+    "description": "HiveやSpark上でのMLアルゴリズムを提供。ETLとMLを同じ土台で扱いたいケースに向く。",
+    "links": {
+      "homepage": "https://hivemall.incubator.apache.org/",
+      "github": "https://github.com/apache/incubator-hivemall"
+    }
+  },
+  {
+    "title": "Julius",
+    "one_liner": "日本発の大語彙連続音声認識エンジン。",
+    "description": "オンデバイスでも動作する軽量性と拡張性が特徴。研究用途から実装まで幅広く使われる。",
+    "links": {
+      "homepage": "https://julius.osdn.jp/",
+      "github": "https://github.com/julius-speech/julius"
+    }
+  },
+  {
+    "title": "OpenToonz",
+    "one_liner": "2Dアニメ制作ソフトをOSS化したプロジェクト。",
+    "description": "商用利用も可能な高機能ツール。プラグインやスクリプト拡張でパイプラインに組み込みやすい。",
+    "links": {
+      "homepage": "https://opentoonz.github.io/e/",
+      "github": "https://github.com/opentoonz/opentoonz"
+    }
+  },
+  {
+    "title": "VRM / UniVRM",
+    "one_liner": "日本発の3Dアバター規格とUnity実装。",
+    "description": "顔出し不要のコミュニケーションやメタバース利用を想定。ボーン/表情等の仕様が整理され、モデル流通を促進する。",
+    "links": {
+      "homepage": "https://vrm.dev/",
+      "github": "https://github.com/vrm-c/UniVRM"
+    }
+  },
+  {
+    "title": "OpenSiv3D",
+    "one_liner": "C++で手早く作れるクリエイティブコーディング環境。",
+    "description": "2D/3D描画、画像・音声処理、GUI、入力制御までワンストップ。教育からプロトタイプまで扱いやすい。",
+    "links": {
+      "homepage": "https://siv3d.github.io/ja-jp/",
+      "github": "https://github.com/Siv3D/OpenSiv3D"
+    }
+  },
+  {
+    "title": "waifu2x",
+    "one_liner": "アニメ調画像向けの深層学習超解像。",
+    "description": "ノイズ除去と拡大を同時に行うモデルで人気に。Webサービスやローカルツールとして多くの派生がある。",
+    "links": {
+      "github": "https://github.com/nagadomi/waifu2x"
+    }
+  },
+  {
+    "title": "Decidim Japan",
+    "one_liner": "参加型民主主義プラットフォームの日本展開。",
+    "description": "住民提案・投票・フォーラム等を備えるCivicTech基盤。国内での導入検討と日本語化・運用知見が蓄積されている。",
+    "links": {
+      "homepage": "https://www.code4japan.org/",
+      "github": "https://github.com/decidim/decidim",
+      "docs": "https://docs.decidim.org/"
+    }
+  },
+  {
+    "title": "Jibungoto Planet",
+    "one_liner": "個人のカーボンフットプリント可視化アプリ。",
+    "description": "NIESとCode for Japanが推進するOSS。行動変容を促すUIとデータ更新の仕組みを持つ。",
+    "links": {
+      "github": "https://github.com/codeforjapan/jibungoto-planet"
+    }
+  },
+  {
+    "title": "Where Does My Money Go?（spending.jp）",
+    "one_liner": "税金の使途を市民に分かりやすく可視化。",
+    "description": "自治体ごとに再利用できるテンプレートを配布。オープンデータと結びつけて公共支出の透明性を高める。",
+    "links": {
+      "homepage": "https://spending.jp/",
+      "github": "https://github.com/codeforjapan/spending.jp"
+    }
+  },
+  {
+    "title": "FixMyStreet Japan",
+    "one_liner": "道路損傷など市民の通報を行政につなぐ仕組み。",
+    "description": "mySocietyのOSSをベースに日本向けに展開。Open311等の標準と連携し、課題の可視化と対応を促す。",
+    "links": {
+      "homepage": "https://fixmystreet.jp/",
+      "github": "https://github.com/mysociety/fixmystreet"
+    }
+  },
+  {
+    "title": "政府オープンデータ（data.go.jp）",
+    "one_liner": "日本政府のオープンデータ・ポータル。",
+    "description": "各府省庁や自治体のデータセットを横断検索。APIやメタデータ整備が進み、再利用の基盤となっている。",
+    "links": {
+      "homepage": "https://www.data.go.jp/"
+    }
+  },
+  {
+    "title": "CKAN",
+    "one_liner": "世界で広く使われるデータカタログOSS。",
+    "description": "データ登録・検索・API提供を一体化。多くの政府/自治体ポータルの基盤として採用されている。",
+    "links": {
+      "homepage": "https://ckan.org/",
+      "github": "https://github.com/ckan/ckan",
+      "docs": "https://docs.ckan.org/"
+    }
+  },
+  {
+    "title": "自治体標準オープンデータセット",
+    "one_liner": "自治体向けに項目や形式を標準化したテンプレ群。",
+    "description": "バス停、避難所、AED等の代表的データに標準仕様を提示。地域間の互換性と再利用性を高める取り組み。",
+    "links": {
+      "homepage": "https://www.digital.go.jp/policies/opendata/"
+    }
+  },
+  {
+    "title": "地方公共団体向けオープンデータパッケージ",
+    "one_liner": "自治体がすぐ始められるオープンデータ配布物。",
+    "description": "カタログ/サイト/ダッシュボードの雛形を含む。運用手順やチェックリストと併せて導入を支援する。",
+    "links": {
+      "homepage": "https://www.code4japan.org/"
+    }
+  },
+  {
+    "title": "e-Gov法令API v2",
+    "one_liner": "日本の法令データを機械可読で取得するAPI。",
+    "description": "法令本文や改正履歴の取得を想定したエンドポイントを提供。時点指定や差分利用などのユースケースに対応する。",
+    "links": {
+      "homepage": "https://elaws.e-gov.go.jp/"
+    }
+  },
+  {
+    "title": "国会・府省会議 議事録メタデータ（NISTEP）",
+    "one_liner": "政府会議等の議事録メタデータを整理・公開。",
+    "description": "横断検索やリンクトデータ化を見据えた取り組み。研究・報道・政策分析の基盤として活用される。",
+    "links": {
+      "homepage": "https://www.nistep.go.jp/",
+      "github": "https://github.com/nistep"
+    }
+  },
+  {
+    "title": "SmartNews 国会議案データ（公開リポジトリ）",
+    "one_liner": "国会提出法案のデータ整備と公開。",
+    "description": "議案情報を機械可読に整理し、市民や研究者の二次利用を支援。可視化や検索のベースとして活用可能。",
+    "links": {
+      "github": "https://github.com/smartnews-politics"
+    }
+  },
+  {
+    "title": "東京都 新型コロナ対策サイト",
+    "one_liner": "自治体OSSの成功例となったCOVID-19情報サイト。",
+    "description": "Nuxt/Vueで構築され、多数の自治体にフォーク展開。翻訳/アクセシビリティ/データ更新の仕組みが洗練されている。",
+    "links": {
+      "homepage": "https://stopcovid19.metro.tokyo.lg.jp/",
+      "github": "https://github.com/tokyo-metropolitan-gov/covid19"
+    }
+  },
+  {
+    "title": "sinsai.info",
+    "one_liner": "2011年の震災時に市民が情報集約した危機マッピング。",
+    "description": "Ushahidi基盤で被害報告を集約・可視化。オープンデータと市民協働の先行事例となった。",
+    "links": {
+      "homepage": "http://sinsai.info/"
+    }
+  },
+  {
+    "title": "GSI Maps（地理院地図）",
+    "one_liner": "国土地理院の地図タイル・ツール群の公開。",
+    "description": "多様な地理レイヤを提供し、災害情報から登山計画まで幅広く活用。開発者向けAPIやサンプルも整備されている。",
+    "links": {
+      "homepage": "https://maps.gsi.go.jp/",
+      "github": "https://github.com/gsi-cyberjapan",
+      "docs": "https://maps.gsi.go.jp/development/"
+    }
+  },
+  {
+    "title": "GTFS-JP",
+    "one_liner": "日本向けに拡張された公共交通データ標準。",
+    "description": "運行時刻や停留所等を共通フォーマット化。事業者・自治体・アプリ開発者のデータ連携を促す。",
+    "links": {
+      "homepage": "https://www.gtfs.jp/"
+    }
+  },
+  {
+    "title": "TokyoGTFS",
+    "one_liner": "首都圏の公共交通GTFS整備・生成の試み。",
+    "description": "鉄道・バス事業者のデータを収集し、GTFS作成/更新の自動化を目指すツール群。地域横展開の参考事例。",
+    "links": {
+      "github": ""
+    }
+  },
+  {
+    "title": "Safecast",
+    "one_liner": "市民科学による環境センサデータの継続公開。",
+    "description": "放射線を中心に、誰もが測定・共有・可視化できる仕組みを提供。CC0等のライセンスで二次利用を推進する。",
+    "links": {
+      "homepage": "https://safecast.org/",
+      "github": "https://github.com/safecast"
+    }
+  },
+  {
+    "title": "YaneuraOu",
+    "one_liner": "高性能な将棋エンジン。",
+    "description": "探索と評価関数の最適化に注力した実装で、研究用の検証やGUIとの連携事例も多い。学習済み評価関数の公開がある。",
+    "links": {
+      "github": "https://github.com/yaneurao/YaneuraOu"
+    }
+  },
+  {
+    "title": "OpenRTM-aist",
+    "one_liner": "ロボット向けRTミドルウェア。",
+    "description": "コンポーネントを組み合わせてロボットシステムを構築。研究と産業の橋渡しを目指す日本発の基盤。",
+    "links": {
+      "homepage": "https://openrtm.org/",
+      "github": "https://github.com/OpenRTM"
+    }
+  },
+  {
+    "title": "Open JTalk",
+    "one_liner": "日本語テキスト音声合成（TTS）システム。",
+    "description": "辞書・音響モデル・フロントエンドを備え、研究や読み上げ用途で広く使われる。各言語バインディングも豊富。",
+    "links": {
+      "homepage": "http://open-jtalk.sourceforge.net/",
+      "github": "https://github.com/r9y9/open_jtalk"
+    }
+  },
+  {
+    "title": "VOICEVOX",
+    "one_liner": "手軽に使える日本語TTSエンジンと音声ライブラリ。",
+    "description": "複数のキャラクターボイスを備え、GUI/CLI/HTTPで扱える。研究・創作・実況など幅広い用途で活用が進む。",
+    "links": {
+      "homepage": "https://voicevox.hiroshiba.jp/",
+      "github": "https://github.com/VOICEVOX/voicevox_engine"
+    }
+  }
+]
+```
+
+Kouchou-AI(広聴AI), Polymoney, Idobata についてもまとめて
+
+```json
+[
+  {
+    "title": "広聴AI (Kouchou-AI)",
+    "one_liner": "ブロードリスニングの意見収集・可視化・分析を行うオープンソース基盤。",
+    "description": "多様なテキスト意見を取り込み、LLMで要約・分類し、ダッシュボードで可視化する。コミュニティで継続開発され、ローカルLLM対応（v3系）によりAPI費用なしの運用も視野に入る。自治体・政党・市民団体の実証での活用を想定。",
+    "links": {
+      "homepage": "https://dd2030.org/kouchou-ai",
+      "github": "https://github.com/digitaldemocracy2030/kouchou-ai",
+      "docs": "https://www.docswell.com/s/tokoroten/ZL1M88-2025-06-14-014546"
+    }
+  },
+  {
+    "title": "Polimoney (ポリマネー)",
+    "one_liner": "政治資金の流れを市民に分かりやすく可視化するダッシュボード（OSS）。",
+    "description": "政治資金収支報告書や会計データをもとに、収入・支出・残高をグラフや明細で公開する。OCRや型定義の整備、データ構造の厳密化を進め、透明性向上と報告作成の省力化を目指す。デモ実装を公開中。",
+    "links": {
+      "homepage": "https://polimoney.dd2030.org/",
+      "github": "https://github.com/digitaldemocracy2030/polimoney",
+      "docs": "https://dd2030.org/history/week11_20250528/polimoney"
+    }
+  },
+  {
+    "title": "いどばた (Idobata)",
+    "one_liner": "日本版の大規模熟議・政策共創を支えるプラットフォーム。",
+    "description": "市民や専門家がオンラインで政策案を熟議し、提言へ落とし込むためのOSS群。意見収集、掲示板での議論（例：Discourse）、GitHubでの原案管理、MkDocs等での公開というワークフローを重視。都のAI戦略提言づくり等で運用例がある。",
+    "links": {
+      "homepage": "https://dd2030.org/",
+      "github": "",
+      "docs": "https://dd2030.org/history/week12_20250604/idobata"
+    }
+  }
+]
+```
+
+出典: 広聴AIの概要と技術解説・週次まとめ（DD2030公式／Docswell）。 ([デジタル民主主義2030][1]) Polimoneyの公式デモとGitHub・週次まとめ。 ([polimoney.dd2030.org][2]) いどばたの公式説明と週次まとめ、関連の実証サイト。 ([デジタル民主主義2030][1])
+
+[1]: https://dd2030.org/?utm_source=chatgpt.com "デジタル民主主義2030"
+[2]: https://polimoney.dd2030.org/demo-takahiro-anno-2024?utm_source=chatgpt.com "安野貴博 | Polimoney (ポリマネー)"
