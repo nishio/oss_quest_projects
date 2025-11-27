@@ -496,5 +496,139 @@ const projectsData = [
       "homepage": "https://dd2030.org/",
       "docs": "https://dd2030.org/history/week12_20250604/idobata"
     }
+  },
+  {
+    "title": "PoliPoli Gov",
+    "category": "Open Government",
+    "one_liner": "自治体向け市民参加プラットフォーム。",
+    "description": "政策提案、アンケート、パブコメ受付、審議会の意見募集などをクラウド上で管理。つくば市など複数の自治体で市民参加プロセスに導入。Decidimとの連携機能も提供し、議論から政策化までのサイクルを支援する。",
+    "why_japan": "日本企業（PoliPoli株式会社）が開発・運営し、つくば市など国内自治体で実績がある。",
+    "links": {
+      "homepage": "https://polipoli.work/gov"
+    }
+  },
+  {
+    "title": "Liqlid",
+    "category": "Open Government",
+    "one_liner": "Liquid Democracy（委任型民主主義）を実現するデジタル参加ツール。",
+    "description": "有権者が議題ごとに直接投票するか、信頼する誰かに投票を委任できる仕組み。Code for Japanが日本語化を進め、東京都武蔵野市で実証実験を実施。ドイツ発だが国内でのローカライズ・活用が進んでいる。",
+    "why_japan": "Code for Japanが日本語化・導入支援を実施。武蔵野市での実証実験など国内事例あり。",
+    "links": {
+      "homepage": "https://liqd.net/en/",
+      "github": "https://github.com/liqd"
+    }
+  },
+  {
+    "title": "my groove さんだ",
+    "category": "Open Government",
+    "one_liner": "兵庫県三田市の市民協働アプリ。",
+    "description": "市民が地域の課題や提案を投稿し、行政や他市民とコミュニケーションできるプラットフォーム。三田市とCivicWave（Civictechスタートアップ）が開発。OSS化の検討が進められている。",
+    "why_japan": "兵庫県三田市が主体となり、国内Civictechコミュニティと協働で開発。",
+    "links": {
+      "homepage": "https://mygroove.city.sanda.lg.jp/"
+    }
+  },
+  {
+    "title": "自治体議会会議録検索システム",
+    "category": "Open Government",
+    "one_liner": "多くの自治体で導入されている議会議事録の横断検索システム。",
+    "description": "全国の自治体議会で採用される議事録検索基盤。発言者・日付・キーワードでの検索が可能。API提供やオープンデータ化も進み、議会の透明性向上に貢献。全国市議会議長会が推進している。",
+    "why_japan": "全国市議会議長会が標準化・推進する日本の議会デジタル化の基盤。",
+    "links": {
+      "homepage": "https://www.si-gichokai.jp/"
+    }
+  },
+  {
+    "title": "My City Report",
+    "category": "Open Government",
+    "one_liner": "市民がスマホで公共施設の不具合を自治体に通報できるアプリ（OSS）。",
+    "description": "千葉市が先駆的に導入し、道路の損傷、ゴミの不法投棄などを写真と位置情報で通報できる仕組み。オープンソース化され、複数の自治体に展開。CivicTechコミュニティとの協働で開発が進む。",
+    "why_japan": "千葉市が主導してOSS化し、国内複数自治体に展開。Code for Japanとの協働例も多い。",
+    "links": {
+      "homepage": "https://www.city.chiba.jp/shimin/shimin/kohokocho/my-city-report.html",
+      "github": "https://github.com/codeforjapan/mycityreport"
+    }
+  },
+  {
+    "title": "国土交通省道路通報システム",
+    "category": "Open Government",
+    "one_liner": "国民が道路の異常や損傷を通報できる国交省の公式システム。",
+    "description": "全国の国道・高速道路の不具合を写真・位置情報付きで通報可能。通報内容は道路管理者に自動送信され、迅速な対応を促す。アプリ版とWeb版の両方で提供。",
+    "why_japan": "国土交通省が運営する公式の市民通報システム。",
+    "links": {
+      "homepage": "https://www.mlit.go.jp/road/dia-info/tuuhou/"
+    }
+  },
+  {
+    "title": "RESAS（地域経済分析システム）",
+    "category": "Open Government",
+    "one_liner": "国と自治体が地域経済をデータで分析・可視化できる公的プラットフォーム。",
+    "description": "人口動態、産業構造、観光、雇用などのビッグデータをダッシュボードで可視化。地方創生の政策立案をエビデンスベースで支援。API提供もあり、自治体や研究者が独自分析に活用できる。",
+    "why_japan": "内閣府と経済産業省が主導する日本の地方創生データ基盤。",
+    "links": {
+      "homepage": "https://resas.go.jp/",
+      "docs": "https://opendata.resas-portal.go.jp/"
+    }
+  },
+  {
+    "title": "Ishikawa \"Milli\"",
+    "category": "Open Government",
+    "one_liner": "石川県のデータ駆動型政策形成を支えるダッシュボード（実証プロジェクト）。",
+    "description": "複数の公開データやセンサーデータを統合し、交通・防災・観光などの政策判断を可視化。Code for Kanazawaなどのコミュニティと協働で開発され、オープンデータとCivicTechの連携事例として注目された。",
+    "why_japan": "石川県とCode for Kanazawaが協働で開発した地域データ可視化の先行事例。",
+    "links": {
+      "homepage": "https://www.pref.ishikawa.lg.jp/"
+    }
+  },
+  {
+    "title": "PLATEAU",
+    "category": "Open Government",
+    "one_liner": "国土交通省が推進する3D都市モデルの整備・公開プロジェクト。",
+    "description": "全国の都市を3Dデータ化し、G空間情報として公開。都市計画、防災シミュレーション、スマートシティ実証に活用される。データはオープンデータとして提供され、民間の都市DX開発にも利用可能。",
+    "why_japan": "国土交通省が主導する日本の3D都市データ基盤プロジェクト。",
+    "links": {
+      "homepage": "https://www.mlit.go.jp/plateau/",
+      "github": "https://github.com/Project-PLATEAU"
+    }
+  },
+  {
+    "title": "xID",
+    "category": "Open Government",
+    "one_liner": "自治体の行政手続きをデジタルIDで簡素化するプラットフォーム。",
+    "description": "マイナンバーカードやSMS認証を活用し、オンライン申請やログインを統合管理。複数の自治体（渋谷区、加賀市など）で導入され、窓口のDX化と市民の利便性向上を実現。民間事業者xIDが開発・提供。",
+    "why_japan": "日本企業xIDが開発し、国内複数自治体で導入されている行政DX基盤。",
+    "links": {
+      "homepage": "https://xid.inc/"
+    }
+  },
+  {
+    "title": "mydoor OSAKA ID",
+    "category": "Open Government",
+    "one_liner": "大阪市のデジタル市民サービス統合プラットフォーム。",
+    "description": "大阪市民向けのデジタルID基盤で、行政手続き、施設予約、イベント申込などを一元管理。マイナンバーカード連携やスマホ完結の手続きを推進し、市民の利便性とDX推進を両立。",
+    "why_japan": "大阪市が主導するデジタル市民サービスの統合基盤。",
+    "links": {
+      "homepage": "https://mydoor.city.osaka.lg.jp/"
+    }
+  },
+  {
+    "title": "めぶくID",
+    "category": "Open Government",
+    "one_liner": "岐阜県関市のデジタルIDを活用した市民サービスプラットフォーム。",
+    "description": "関市が導入したデジタルIDで、行政手続き、イベント参加、地域ポイント付与などを統合。地方都市でのデジタル市民参加と地域活性化のモデルケースとして注目されている。",
+    "why_japan": "岐阜県関市が主導する地方自治体のデジタルID先行事例。",
+    "links": {
+      "homepage": "https://mebuku.city.seki.lg.jp/"
+    }
+  },
+  {
+    "title": "会津若松＋ID",
+    "category": "Open Government",
+    "one_liner": "会津若松市のスマートシティ基盤を支えるデジタルID。",
+    "description": "会津若松市が推進するスマートシティプロジェクトのID基盤。行政サービス、地域ポイント、健康管理アプリなどを統合し、市民の生活と地域データを連携。先進的な地方DX事例として知られる。",
+    "why_japan": "会津若松市が主導する日本のスマートシティ先行事例。",
+    "links": {
+      "homepage": "https://www.city.aizuwakamatsu.fukushima.jp/"
+    }
   }
 ];
