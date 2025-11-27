@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>日本のオープンソースプロジェクト | Japanese Open Source Projects</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            margin-bottom: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            max-width: 800px;
+            margin: 0 auto;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .filter-bar {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-bar label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #3498db;
+            background: white;
+            color: #3498db;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9em;
+        }
+
+        .filter-btn:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .filter-btn.active {
+            background: #3498db;
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+        }
+
+        .project-header {
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-size: 1.5em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .project-category {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .category-opensource {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .category-opendata {
+            background: #e3f2fd;
+            color: #1565c0;
+        }
+
+        .category-opengovernment {
+            background: #fce4ec;
+            color: #c2185b;
+        }
+
+        .project-oneliner {
+            color: #555;
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 1.05em;
+        }
+
+        .project-description {
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.7;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .project-link {
+            padding: 8px 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9em;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .link-homepage {
+            background: #3498db;
+            color: white;
+        }
+
+        .link-homepage:hover {
+            background: #2980b9;
+        }
+
+        .link-github {
+            background: #24292e;
+            color: white;
+        }
+
+        .link-github:hover {
+            background: #1a1e22;
+        }
+
+        .link-docs {
+            background: #27ae60;
+            color: white;
+        }
+
+        .link-docs:hover {
+            background: #229954;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #7f8c8d;
+            background: white;
+            border-radius: 10px;
+            margin-top: 40px;
+        }
+
+        .stats {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .stats-number {
+            font-size: 2em;
+            font-weight: bold;
+            color: #3498db;
+        }
+
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🇯🇵 日本のオープンソースプロジェクト</h1>
+            <p class="subtitle">Japanese Open Source Projects</p>
+            <p class="description">
+                日本人が主導・貢献するオープンソースプロジェクトのカタログです。<br>
+                Open Source、Open Data、Open Governmentの3つのカテゴリに分けて紹介しています。
+            </p>
+        </header>
+
+        <div class="stats">
+            <span class="stats-number" id="project-count">0</span> プロジェクト
+        </div>
+
+        <div class="filter-bar">
+            <label>カテゴリ:</label>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-category="all">すべて</button>
+                <button class="filter-btn" data-category="Open Source">Open Source</button>
+                <button class="filter-btn" data-category="Open Data">Open Data</button>
+                <button class="filter-btn" data-category="Open Government">Open Government</button>
+            </div>
+        </div>
+
+        <div class="projects-grid" id="projects-grid">
+            <!-- プロジェクトカードがここに動的に追加されます -->
+        </div>
+
+        <footer>
+            <p>このプロジェクトは <a href="https://github.com/ocftw/open-star-ter-village" target="_blank">Open StarTer Village</a> にインスパイアされています。</p>
+            <p style="margin-top: 10px;">データは継続的に更新されます。</p>
+        </footer>
+    </div>
+
+    <script src="projects-data.js"></script>
+    <script>
+        // カテゴリ別のCSSクラスマッピング
+        const categoryClass = {
+            "Open Source": "category-opensource",
+            "Open Data": "category-opendata",
+            "Open Government": "category-opengovernment"
+        };
+
+        // プロジェクトカードを生成
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'project-card';
+            card.dataset.category = project.category;
+
+            const links = [];
+            if (project.links.homepage) {
+                links.push(`<a href="${project.links.homepage}" class="project-link link-homepage" target="_blank">🌐 ホームページ</a>`);
+            }
+            if (project.links.github) {
+                links.push(`<a href="${project.links.github}" class="project-link link-github" target="_blank">💻 GitHub</a>`);
+            }
+            if (project.links.docs) {
+                links.push(`<a href="${project.links.docs}" class="project-link link-docs" target="_blank">📚 ドキュメント</a>`);
+            }
+
+            card.innerHTML = `
+                <div class="project-header">
+                    <div class="project-title">${project.title}</div>
+                    <span class="project-category ${categoryClass[project.category]}">${project.category}</span>
+                </div>
+                <div class="project-oneliner">${project.one_liner}</div>
+                <div class="project-description">${project.description}</div>
+                <div class="project-links">
+                    ${links.join('')}
+                </div>
+            `;
+
+            return card;
+        }
+
+        // プロジェクト一覧を表示
+        function renderProjects(filterCategory = 'all') {
+            const grid = document.getElementById('projects-grid');
+            grid.innerHTML = '';
+
+            let displayedCount = 0;
+
+            projectsData.forEach(project => {
+                if (filterCategory === 'all' || project.category === filterCategory) {
+                    grid.appendChild(createProjectCard(project));
+                    displayedCount++;
+                }
+            });
+
+            document.getElementById('project-count').textContent = displayedCount;
+        }
+
+        // フィルタボタンのイベントリスナー
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                renderProjects(this.dataset.category);
+            });
+        });
+
+        // 初期表示
+        renderProjects();
+    </script>
+</body>
+</html>
