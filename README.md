@@ -10,22 +10,22 @@
 
 ## 📋 収録プロジェクト
 
-44のプロジェクトを3つのカテゴリに分類して紹介：
+59のプロジェクトを3つのカテゴリに分類して紹介：
 
-### Open Source（27プロジェクト）
+### Open Source（28プロジェクト）
 ML/AI、NLP、DevOps、プログラミング言語、クリエイティブツールなど
 
-- **代表例**: Ruby, Optuna, Fluentd, MeCab, Misskey, VRM/UniVRM, VOICEVOX
+- **代表例**: Ruby, Jenkins, Optuna, Fluentd, MeCab, Misskey, VRM/UniVRM, VOICEVOX
 
 ### Open Data（12プロジェクト）
 政府データ、標準規格、地図、交通、環境データなど
 
 - **代表例**: data.go.jp, e-Gov法令API, GTFS-JP, 地理院地図, Safecast, Polimoney
 
-### Open Government（6プロジェクト）
-参加型プラットフォーム、市民通報、危機対応など
+### Open Government（19プロジェクト）
+参加型プラットフォーム、市民通報、危機対応、データドリブン政策、デジタルIDなど
 
-- **代表例**: Decidim Japan, 広聴AI, いどばた, FixMyStreet Japan, 東京都新型コロナ対策サイト
+- **代表例**: Decidim Japan, 広聴AI, いどばた, FixMyStreet Japan, 東京都新型コロナ対策サイト, RESAS, PLATEAU
 
 ## 🎯 選定基準
 
@@ -47,6 +47,26 @@ ML/AI、NLP、DevOps、プログラミング言語、クリエイティブツー
 プロジェクトの追加提案や情報の修正は、IssueやPull Requestでお願いします。
 
 詳細は[CLAUDE.md](CLAUDE.md)をご覧ください。
+
+## 📂 リポジトリ構成
+
+```
+/
+├── index.html              # Webカタログ（GitHub Pages公開）
+├── projects-data.js        # プロジェクトデータ
+├── README.md               # このファイル
+├── CLAUDE.md               # 開発ガイド
+└── docs/                   # ドキュメント（非公開）
+    ├── research/           # 調査資料
+    │   ├── why_japan_data.md
+    │   ├── deep_research_why_japan.md
+    │   ├── deep_research_prompt.md
+    │   └── 日本のOpen Government事例調査結果.pdf
+    └── planning/           # 企画資料
+        ├── analysis_taiwan_data.md
+        ├── data_structure_proposal.md
+        └── 3group.txt
+```
 
 ## 📜 ライセンス
 
