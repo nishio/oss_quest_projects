@@ -1,27 +1,28 @@
 const projectsData = [
-  // Open Source Projects
+  // Open Source Projects (優先度順)
+  // 高優先度: 世界的知名度、日本独自性、エンジニア以外の関与
   {
-    "title": "Optuna",
+    "title": "Ruby",
     "category": "Open Source",
-    "one_liner": "機械学習のハイパーパラメータ最適化フレームワーク。",
-    "description": "Python中心に使える最適化ツールで、Sampler/Prunerなど拡張点が明確。実験管理や分散実行の実装例が豊富で、研究から実運用まで幅広く利用されている。",
-    "why_japan": "Preferred Networksが開発した日本発のハイパーパラメータ最適化フレームワーク。PFNの研究者チーム（秋葉拓哉ら）主導でOSSとして公開され、国内外の機械学習実務で広く利用されている。",
+    "one_liner": "日本発の汎用プログラミング言語。",
+    "description": "『書いていて楽しい』を重視した動的言語。Railsをはじめ豊富なライブラリ群とコミュニティに支えられ、Webやスクリプト自動化で広く使われる。",
+    "why_japan": "まつもとゆきひろが「書いていて楽しい」を理念に日本で設計したオブジェクト指向スクリプト言語。Railsなどを通じ世界中で利用される一方、日本のWebサービスや教育現場でも広く使われている。",
     "links": {
-      "homepage": "https://optuna.org",
-      "github": "https://github.com/optuna/optuna",
-      "docs": "https://optuna.readthedocs.io/"
+      "homepage": "https://www.ruby-lang.org/ja/",
+      "github": "https://github.com/ruby/ruby",
+      "docs": "https://docs.ruby-lang.org/ja/"
     }
   },
   {
-    "title": "Misskey",
+    "title": "Jenkins",
     "category": "Open Source",
-    "one_liner": "日本発のActivityPub対応分散SNS。",
-    "description": "リアクションや豊富なカスタマイズ性を備えたFediverseクライアント/サーバ。国内外で多数のインスタンスが稼働し、拡張エコシステムも活発。",
-    "why_japan": "日本人開発者syuilo（篠田英司）が2014年に日本で開発を開始したActivityPub対応分散SNS。日本語圏のFediverse文化を牽引し、日本コミュニティ主導で活発に開発が続く。",
+    "one_liner": "継続的インテグレーション（CI）のデファクトスタンダード。",
+    "description": "ビルド・テスト・デプロイを自動化するCI/CDサーバ。豊富なプラグインエコシステムと柔軟なパイプライン記述により、あらゆる開発フローに対応。世界中で広く使われている。",
+    "why_japan": "日本人開発者の川口耕介がSun在籍時にHudsonとして開発を始め、後にJenkinsとしてコミュニティ主導のCIサーバに発展。日本Jenkinsユーザ会やJenkinsユーザ・カンファレンス東京など強い国内コミュニティが継続的に支えている。",
     "links": {
-      "homepage": "https://misskey-hub.net/ja/",
-      "github": "https://github.com/misskey-dev/misskey",
-      "docs": "https://misskey-hub.net/ja/docs/"
+      "homepage": "https://www.jenkins.io/",
+      "github": "https://github.com/jenkinsci/jenkins",
+      "docs": "https://www.jenkins.io/doc/"
     }
   },
   {
@@ -37,25 +38,60 @@ const projectsData = [
     }
   },
   {
-    "title": "Ruby",
+    "title": "Misskey",
     "category": "Open Source",
-    "one_liner": "日本発の汎用プログラミング言語。",
-    "description": "『書いていて楽しい』を重視した動的言語。Railsをはじめ豊富なライブラリ群とコミュニティに支えられ、Webやスクリプト自動化で広く使われる。",
-    "why_japan": "まつもとゆきひろが「書いていて楽しい」を理念に日本で設計したオブジェクト指向スクリプト言語。Railsなどを通じ世界中で利用される一方、日本のWebサービスや教育現場でも広く使われている。",
+    "one_liner": "日本発のActivityPub対応分散SNS。",
+    "description": "リアクションや豊富なカスタマイズ性を備えたFediverseクライアント/サーバ。国内外で多数のインスタンスが稼働し、拡張エコシステムも活発。",
+    "why_japan": "日本人開発者syuilo（篠田英司）が2014年に日本で開発を開始したActivityPub対応分散SNS。日本語圏のFediverse文化を牽引し、日本コミュニティ主導で活発に開発が続く。",
     "links": {
-      "homepage": "https://www.ruby-lang.org/ja/",
-      "github": "https://github.com/ruby/ruby",
-      "docs": "https://docs.ruby-lang.org/ja/"
+      "homepage": "https://misskey-hub.net/ja/",
+      "github": "https://github.com/misskey-dev/misskey",
+      "docs": "https://misskey-hub.net/ja/docs/"
     }
   },
   {
-    "title": "mruby",
+    "title": "VOICEVOX",
     "category": "Open Source",
-    "one_liner": "組込み向けの軽量Ruby実装。",
-    "description": "小さなフットプリントでRubyの楽しさをそのままに、IoT/家電/ゲーム等の組込み用途で利用可能。C/C++と併用しやすい構成が特徴。",
-    "why_japan": "Rubyの作者まつもとゆきひろが組み込み用途向けに設計した軽量Ruby実装。多くの日本企業・自治体システムの組み込みスクリプトとして採用され、日本のIoT文脈で活用されている。",
+    "one_liner": "手軽に使える日本語TTSエンジンと音声ライブラリ。",
+    "description": "複数のキャラクターボイスを備え、GUI/CLI/HTTPで扱える。研究・創作・実況など幅広い用途で活用が進む。",
+    "why_japan": "日本発の無料テキスト読み上げ・歌声合成ソフトで、OSS版エンジンと製品版をGitHubで公開。商用利用可能な日本語TTSとして多くのクリエイターや自治体が採用し、日本語音声合成コミュニティを活性化している。",
     "links": {
-      "github": "https://github.com/mruby/mruby"
+      "homepage": "https://voicevox.hiroshiba.jp/",
+      "github": "https://github.com/VOICEVOX/voicevox_engine"
+    }
+  },
+  {
+    "title": "VRM / UniVRM",
+    "category": "Open Source",
+    "one_liner": "日本発の3Dアバター規格とUnity実装。",
+    "description": "顔出し不要のコミュニケーションやメタバース利用を想定。ボーン/表情等の仕様が整理され、モデル流通を促進する。",
+    "why_japan": "日本発の3Dアバターファイル形式VRMを一般社団法人VRMコンソーシアムが策定し、Unity実装としてUniVRMをOSS公開。VTuber文化など日本発のアバター利用を支える標準として国際標準化も進められている。",
+    "links": {
+      "homepage": "https://vrm.dev/",
+      "github": "https://github.com/vrm-c/UniVRM"
+    }
+  },
+  {
+    "title": "MeCab",
+    "category": "Open Source",
+    "one_liner": "日本語形態素解析の定番ツール。",
+    "description": "辞書を差し替えて多様な用途に対応。テキスト前処理の基盤として長年利用され、学術・産業の双方で実績がある。",
+    "why_japan": "京都大学大学院情報学研究科とNTTコミュニケーション科学基礎研究所の共同研究として開発された日本語形態素解析エンジン。日本語NLP研究や商用システムで事実上の標準ツールとなっている。",
+    "links": {
+      "homepage": "https://taku910.github.io/mecab/",
+      "github": "https://github.com/taku910/mecab"
+    }
+  },
+  {
+    "title": "Optuna",
+    "category": "Open Source",
+    "one_liner": "機械学習のハイパーパラメータ最適化フレームワーク。",
+    "description": "Python中心に使える最適化ツールで、Sampler/Prunerなど拡張点が明確。実験管理や分散実行の実装例が豊富で、研究から実運用まで幅広く利用されている。",
+    "why_japan": "Preferred Networksが開発した日本発のハイパーパラメータ最適化フレームワーク。PFNの研究者チーム（秋葉拓哉ら）主導でOSSとして公開され、国内外の機械学習実務で広く利用されている。",
+    "links": {
+      "homepage": "https://optuna.org",
+      "github": "https://github.com/optuna/optuna",
+      "docs": "https://optuna.readthedocs.io/"
     }
   },
   {
@@ -79,70 +115,6 @@ const projectsData = [
     "links": {
       "homepage": "https://chainer.org/",
       "github": "https://github.com/chainer/chainer"
-    }
-  },
-  {
-    "title": "NNabla",
-    "category": "Open Source",
-    "one_liner": "Sony製のディープラーニングフレームワーク。",
-    "description": "学習・推論・モデル変換ツールを含むエコシステムを提供。組込みやオンデバイス推論も視野に、実運用での活用事例がある。",
-    "why_japan": "ソニーグループが開発するNeural Network Libraries（nnabla）は、日本企業発のディープラーニングフレームワーク。Neural Network Consoleや組込みボードSpresenseと連携し、日本の産業応用で使われている。",
-    "links": {
-      "homepage": "https://nnabla.org/",
-      "github": "https://github.com/sony/nnabla",
-      "docs": "https://nnabla.readthedocs.io/"
-    }
-  },
-  {
-    "title": "MeCab",
-    "category": "Open Source",
-    "one_liner": "日本語形態素解析の定番ツール。",
-    "description": "辞書を差し替えて多様な用途に対応。テキスト前処理の基盤として長年利用され、学術・産業の双方で実績がある。",
-    "why_japan": "京都大学大学院情報学研究科とNTTコミュニケーション科学基礎研究所の共同研究として開発された日本語形態素解析エンジン。日本語NLP研究や商用システムで事実上の標準ツールとなっている。",
-    "links": {
-      "homepage": "https://taku910.github.io/mecab/",
-      "github": "https://github.com/taku910/mecab"
-    }
-  },
-  {
-    "title": "Sudachi",
-    "category": "Open Source",
-    "one_liner": "業務志向の日本語形態素解析器と派生実装群。",
-    "description": "本体（Java）に加え、Python版（SudachiPy）やRust版（Sudachi.rs）など派生が存在。品詞体系と辞書設計が実務で扱いやすい。",
-    "why_japan": "ワークスアプリケーションズ徳島AI・NLP研究所が中心となり開発した日本語形態素解析器。日本語の単語境界や表記揺れの問題に対応し、ElasticsearchやGiNZAなど日本語向けOSSの基盤として使われる。",
-    "links": {
-      "github": "https://github.com/WorksApplications/Sudachi"
-    }
-  },
-  {
-    "title": "SentencePiece",
-    "category": "Open Source",
-    "one_liner": "言語非依存のサブワード分割ツール。",
-    "description": "BPE/Unigram等のアルゴリズムを提供し、多言語の前処理を統一。大規模言語モデルのトークナイズに広く使われる。",
-    "why_japan": "工藤拓（日本出身研究者）がGoogleで開発したサブワード分割ライブラリ。英日翻訳実験を含む論文とともに公開され、日本語を含む多言語NMT・日本語LLMのトークナイザとして広く利用されている。",
-    "links": {
-      "github": "https://github.com/google/sentencepiece"
-    }
-  },
-  {
-    "title": "GiNZA",
-    "category": "Open Source",
-    "one_liner": "spaCyベースの日本語NLPモデル群。",
-    "description": "日本語の形態素解析・依存解析・固有表現抽出を高精度で提供。シンプルなAPIでプロトタイピングから実装まで扱いやすい。",
-    "why_japan": "リクルートと国立国語研究所の共同研究から生まれた日本語NLPライブラリ。spaCy上で動作する日本語解析モデルを提供し、日本語形態素解析・構文解析・固有表現抽出のOSSとして国内で広く使われている。",
-    "links": {
-      "homepage": "https://megagonlabs.github.io/ginza/",
-      "github": "https://github.com/megagonlabs/ginza"
-    }
-  },
-  {
-    "title": "Mozc",
-    "category": "Open Source",
-    "one_liner": "Google日本語入力のOSS版。",
-    "description": "変換エンジンや辞書を含む日本語入力システム。クロスプラットフォームに対応し、派生プロジェクトも多数。",
-    "why_japan": "Google日本語入力をオープンソース化した日本語IMEプロジェクト。Google Japanのエンジニアが中心となって開発し、Linuxを中心に日本語入力基盤として広く利用されている。",
-    "links": {
-      "github": "https://github.com/google/mozc"
     }
   },
   {
@@ -170,25 +142,24 @@ const projectsData = [
     }
   },
   {
-    "title": "Apache Hivemall",
+    "title": "GiNZA",
     "category": "Open Source",
-    "one_liner": "SQLで機械学習を実現する拡張ライブラリ。",
-    "description": "HiveやSpark上でのMLアルゴリズムを提供。ETLとMLを同じ土台で扱いたいケースに向く。",
-    "why_japan": "Treasure Dataの油井誠ら日本人エンジニアが開発した機械学習ライブラリで、Apache HivemallとしてASFトップレベルプロジェクト化された日本発OSS。日本企業のビッグデータ分析で利用されている。",
+    "one_liner": "spaCyベースの日本語NLPモデル群。",
+    "description": "日本語の形態素解析・依存解析・固有表現抽出を高精度で提供。シンプルなAPIでプロトタイピングから実装まで扱いやすい。",
+    "why_japan": "リクルートと国立国語研究所の共同研究から生まれた日本語NLPライブラリ。spaCy上で動作する日本語解析モデルを提供し、日本語形態素解析・構文解析・固有表現抽出のOSSとして国内で広く使われている。",
     "links": {
-      "homepage": "https://hivemall.incubator.apache.org/",
-      "github": "https://github.com/apache/incubator-hivemall"
+      "homepage": "https://megagonlabs.github.io/ginza/",
+      "github": "https://github.com/megagonlabs/ginza"
     }
   },
   {
-    "title": "Julius",
+    "title": "Sudachi",
     "category": "Open Source",
-    "one_liner": "日本発の大語彙連続音声認識エンジン。",
-    "description": "オンデバイスでも動作する軽量性と拡張性が特徴。研究用途から実装まで幅広く使われる。",
-    "why_japan": "京都大学河原研究室を中心に開発された大語彙連続音声認識エンジン。日本語音声認識研究用に始まり、IPA日本語ディクテーションキットなど国産プロジェクトの中核として長年利用されている。",
+    "one_liner": "業務志向の日本語形態素解析器と派生実装群。",
+    "description": "本体（Java）に加え、Python版（SudachiPy）やRust版（Sudachi.rs）など派生が存在。品詞体系と辞書設計が実務で扱いやすい。",
+    "why_japan": "ワークスアプリケーションズ徳島AI・NLP研究所が中心となり開発した日本語形態素解析器。日本語の単語境界や表記揺れの問題に対応し、ElasticsearchやGiNZAなど日本語向けOSSの基盤として使われる。",
     "links": {
-      "homepage": "https://julius.osdn.jp/",
-      "github": "https://github.com/julius-speech/julius"
+      "github": "https://github.com/WorksApplications/Sudachi"
     }
   },
   {
@@ -203,14 +174,13 @@ const projectsData = [
     }
   },
   {
-    "title": "VRM / UniVRM",
+    "title": "waifu2x",
     "category": "Open Source",
-    "one_liner": "日本発の3Dアバター規格とUnity実装。",
-    "description": "顔出し不要のコミュニケーションやメタバース利用を想定。ボーン/表情等の仕様が整理され、モデル流通を促進する。",
-    "why_japan": "日本発の3Dアバターファイル形式VRMを一般社団法人VRMコンソーシアムが策定し、Unity実装としてUniVRMをOSS公開。VTuber文化など日本発のアバター利用を支える標準として国際標準化も進められている。",
+    "one_liner": "アニメ調画像向けの深層学習超解像。",
+    "description": "ノイズ除去と拡大を同時に行うモデルで人気に。Webサービスやローカルツールとして多くの派生がある。",
+    "why_japan": "日本人開発者nagadomiによるアニメ画像向け超解像・ノイズ除去プログラム。日本発OSSとして世界的に利用され、多数の派生実装やWindows向けGUI版が日本コミュニティから生まれている。",
     "links": {
-      "homepage": "https://vrm.dev/",
-      "github": "https://github.com/vrm-c/UniVRM"
+      "github": "https://github.com/nagadomi/waifu2x"
     }
   },
   {
@@ -225,34 +195,24 @@ const projectsData = [
     }
   },
   {
-    "title": "waifu2x",
+    "title": "mruby",
     "category": "Open Source",
-    "one_liner": "アニメ調画像向けの深層学習超解像。",
-    "description": "ノイズ除去と拡大を同時に行うモデルで人気に。Webサービスやローカルツールとして多くの派生がある。",
-    "why_japan": "日本人開発者nagadomiによるアニメ画像向け超解像・ノイズ除去プログラム。日本発OSSとして世界的に利用され、多数の派生実装やWindows向けGUI版が日本コミュニティから生まれている。",
+    "one_liner": "組込み向けの軽量Ruby実装。",
+    "description": "小さなフットプリントでRubyの楽しさをそのままに、IoT/家電/ゲーム等の組込み用途で利用可能。C/C++と併用しやすい構成が特徴。",
+    "why_japan": "Rubyの作者まつもとゆきひろが組み込み用途向けに設計した軽量Ruby実装。多くの日本企業・自治体システムの組み込みスクリプトとして採用され、日本のIoT文脈で活用されている。",
     "links": {
-      "github": "https://github.com/nagadomi/waifu2x"
+      "github": "https://github.com/mruby/mruby"
     }
   },
   {
-    "title": "YaneuraOu",
+    "title": "Julius",
     "category": "Open Source",
-    "one_liner": "高性能な将棋エンジン。",
-    "description": "探索と評価関数の最適化に注力した実装で、研究用の検証やGUIとの連携事例も多い。学習済み評価関数の公開がある。",
-    "why_japan": "磯崎元洋（やねうらお）が開発したオープンソース将棋エンジンで、プロ棋士にも勝利した強豪ソフト。多くの将棋AIが本エンジンをベースに開発されており、日本のコンピュータ将棋研究の基盤となっている。",
+    "one_liner": "日本発の大語彙連続音声認識エンジン。",
+    "description": "オンデバイスでも動作する軽量性と拡張性が特徴。研究用途から実装まで幅広く使われる。",
+    "why_japan": "京都大学河原研究室を中心に開発された大語彙連続音声認識エンジン。日本語音声認識研究用に始まり、IPA日本語ディクテーションキットなど国産プロジェクトの中核として長年利用されている。",
     "links": {
-      "github": "https://github.com/yaneurao/YaneuraOu"
-    }
-  },
-  {
-    "title": "OpenRTM-aist",
-    "category": "Open Source",
-    "one_liner": "ロボット向けRTミドルウェア。",
-    "description": "コンポーネントを組み合わせてロボットシステムを構築。研究と産業の橋渡しを目指す日本発の基盤。",
-    "why_japan": "産業技術総合研究所が開発したRTミドルウェア実装で、OMG RTC仕様に準拠した世界初の実装。日本政府プロジェクトの支援を受けつつロボット開発に用いられ、国内外の研究機関で利用されている。",
-    "links": {
-      "homepage": "https://openrtm.org/",
-      "github": "https://github.com/OpenRTM"
+      "homepage": "https://julius.osdn.jp/",
+      "github": "https://github.com/julius-speech/julius"
     }
   },
   {
@@ -267,14 +227,67 @@ const projectsData = [
     }
   },
   {
-    "title": "VOICEVOX",
+    "title": "Mozc",
     "category": "Open Source",
-    "one_liner": "手軽に使える日本語TTSエンジンと音声ライブラリ。",
-    "description": "複数のキャラクターボイスを備え、GUI/CLI/HTTPで扱える。研究・創作・実況など幅広い用途で活用が進む。",
-    "why_japan": "日本発の無料テキスト読み上げ・歌声合成ソフトで、OSS版エンジンと製品版をGitHubで公開。商用利用可能な日本語TTSとして多くのクリエイターや自治体が採用し、日本語音声合成コミュニティを活性化している。",
+    "one_liner": "Google日本語入力のOSS版。",
+    "description": "変換エンジンや辞書を含む日本語入力システム。クロスプラットフォームに対応し、派生プロジェクトも多数。",
+    "why_japan": "Google日本語入力をオープンソース化した日本語IMEプロジェクト。Google Japanのエンジニアが中心となって開発し、Linuxを中心に日本語入力基盤として広く利用されている。",
     "links": {
-      "homepage": "https://voicevox.hiroshiba.jp/",
-      "github": "https://github.com/VOICEVOX/voicevox_engine"
+      "github": "https://github.com/google/mozc"
+    }
+  },
+  {
+    "title": "YaneuraOu",
+    "category": "Open Source",
+    "one_liner": "高性能な将棋エンジン。",
+    "description": "探索と評価関数の最適化に注力した実装で、研究用の検証やGUIとの連携事例も多い。学習済み評価関数の公開がある。",
+    "why_japan": "磯崎元洋（やねうらお）が開発したオープンソース将棋エンジンで、プロ棋士にも勝利した強豪ソフト。多くの将棋AIが本エンジンをベースに開発されており、日本のコンピュータ将棋研究の基盤となっている。",
+    "links": {
+      "github": "https://github.com/yaneurao/YaneuraOu"
+    }
+  },
+  {
+    "title": "NNabla",
+    "category": "Open Source",
+    "one_liner": "Sony製のディープラーニングフレームワーク。",
+    "description": "学習・推論・モデル変換ツールを含むエコシステムを提供。組込みやオンデバイス推論も視野に、実運用での活用事例がある。",
+    "why_japan": "ソニーグループが開発するNeural Network Libraries（nnabla）は、日本企業発のディープラーニングフレームワーク。Neural Network Consoleや組込みボードSpresenseと連携し、日本の産業応用で使われている。",
+    "links": {
+      "homepage": "https://nnabla.org/",
+      "github": "https://github.com/sony/nnabla",
+      "docs": "https://nnabla.readthedocs.io/"
+    }
+  },
+  {
+    "title": "SentencePiece",
+    "category": "Open Source",
+    "one_liner": "言語非依存のサブワード分割ツール。",
+    "description": "BPE/Unigram等のアルゴリズムを提供し、多言語の前処理を統一。大規模言語モデルのトークナイズに広く使われる。",
+    "why_japan": "工藤拓（日本出身研究者）がGoogleで開発したサブワード分割ライブラリ。英日翻訳実験を含む論文とともに公開され、日本語を含む多言語NMT・日本語LLMのトークナイザとして広く利用されている。",
+    "links": {
+      "github": "https://github.com/google/sentencepiece"
+    }
+  },
+  {
+    "title": "Apache Hivemall",
+    "category": "Open Source",
+    "one_liner": "SQLで機械学習を実現する拡張ライブラリ。",
+    "description": "HiveやSpark上でのMLアルゴリズムを提供。ETLとMLを同じ土台で扱いたいケースに向く。",
+    "why_japan": "Treasure Dataの油井誠ら日本人エンジニアが開発した機械学習ライブラリで、Apache HivemallとしてASFトップレベルプロジェクト化された日本発OSS。日本企業のビッグデータ分析で利用されている。",
+    "links": {
+      "homepage": "https://hivemall.incubator.apache.org/",
+      "github": "https://github.com/apache/incubator-hivemall"
+    }
+  },
+  {
+    "title": "OpenRTM-aist",
+    "category": "Open Source",
+    "one_liner": "ロボット向けRTミドルウェア。",
+    "description": "コンポーネントを組み合わせてロボットシステムを構築。研究と産業の橋渡しを目指す日本発の基盤。",
+    "why_japan": "産業技術総合研究所が開発したRTミドルウェア実装で、OMG RTC仕様に準拠した世界初の実装。日本政府プロジェクトの支援を受けつつロボット開発に用いられ、国内外の研究機関で利用されている。",
+    "links": {
+      "homepage": "https://openrtm.org/",
+      "github": "https://github.com/OpenRTM"
     }
   },
   {
@@ -299,18 +312,6 @@ const projectsData = [
       "github": "https://github.com/codeforjapan/jibungoto-planet"
     }
   },
-  {
-    "title": "Jenkins",
-    "category": "Open Source",
-    "one_liner": "継続的インテグレーション（CI）のデファクトスタンダード。",
-    "description": "ビルド・テスト・デプロイを自動化するCI/CDサーバ。豊富なプラグインエコシステムと柔軟なパイプライン記述により、あらゆる開発フローに対応。世界中で広く使われている。",
-    "why_japan": "日本人開発者の川口耕介がSun在籍時にHudsonとして開発を始め、後にJenkinsとしてコミュニティ主導のCIサーバに発展。日本Jenkinsユーザ会やJenkinsユーザ・カンファレンス東京など強い国内コミュニティが継続的に支えている。",
-    "links": {
-      "homepage": "https://www.jenkins.io/",
-      "github": "https://github.com/jenkinsci/jenkins",
-      "docs": "https://www.jenkins.io/doc/"
-    }
-  },
 
   // Open Data Projects
   {
@@ -324,26 +325,6 @@ const projectsData = [
     }
   },
   {
-    "title": "自治体標準オープンデータセット",
-    "category": "Open Data",
-    "one_liner": "自治体向けに項目や形式を標準化したテンプレ群。",
-    "description": "バス停、避難所、AED等の代表的データに標準仕様を提示。地域間の互換性と再利用性を高める取り組み。",
-    "why_japan": "デジタル庁が策定した自治体向け標準データ仕様群。公共施設一覧や人口などの形式を統一し、日本全国の自治体オープンデータを機械処理しやすくすることで、横断的な利活用を促進している。",
-    "links": {
-      "homepage": "https://www.digital.go.jp/policies/opendata/"
-    }
-  },
-  {
-    "title": "地方公共団体向けオープンデータパッケージ",
-    "category": "Open Data",
-    "one_liner": "自治体がすぐ始められるオープンデータ配布物。",
-    "description": "カタログ/サイト/ダッシュボードの雛形を含む。運用手順やチェックリストと併せて導入を支援する。",
-    "why_japan": "内閣官房IT総合戦略室がGitHubで公開した自治体向けOSSパッケージ。CKANベースのオープンデータカタログとダッシュボードを一括導入可能にし、日本の地方公共団体のオープンデータ公開を後押ししている。",
-    "links": {
-      "homepage": "https://www.code4japan.org/"
-    }
-  },
-  {
     "title": "e-Gov法令API v2",
     "category": "Open Data",
     "one_liner": "日本の法令データを機械可読で取得するAPI。",
@@ -354,39 +335,6 @@ const projectsData = [
     }
   },
   {
-    "title": "国会・府省会議 議事録メタデータ（NISTEP）",
-    "category": "Open Data",
-    "one_liner": "政府会議等の議事録メタデータを整理・公開。",
-    "description": "横断検索やリンクトデータ化を見据えた取り組み。研究・報道・政策分析の基盤として活用される。",
-    "why_japan": "文科省所管のNISTEPが公表した国会会議録・府省審議会議事録のメタデータセット。約4万5千件の議事録URL等をGitHubで公開し、日本の議会・行政プロセスの研究や透明性向上に貢献している。",
-    "links": {
-      "homepage": "https://www.nistep.go.jp/",
-      "github": "https://github.com/nistep"
-    }
-  },
-  {
-    "title": "SmartNews 国会議案データ",
-    "category": "Open Data",
-    "one_liner": "国会提出法案のデータ整備と公開。",
-    "description": "議案情報を機械可読に整理し、市民や研究者の二次利用を支援。可視化や検索のベースとして活用可能。",
-    "why_japan": "スマートニュース メディア研究所が衆参両院サイトから収集し、約2万件の国会議案データをGitHubでオープンデータ化。日本の立法動向を分析可能にし、報道機関や研究者の調査を支援している。",
-    "links": {
-      "github": "https://github.com/smartnews-politics"
-    }
-  },
-  {
-    "title": "GSI Maps（地理院地図）",
-    "category": "Open Data",
-    "one_liner": "国土地理院の地図タイル・ツール群の公開。",
-    "description": "多様な地理レイヤを提供し、災害情報から登山計画まで幅広く活用。開発者向けAPIやサンプルも整備されている。",
-    "why_japan": "国土地理院が提供するウェブ地図サービスで、地理院タイルや地図データをオンラインで無料公開。GitHub上のgsimapsリポジトリとしてOSS開発も行われ、日本の地理オープンデータの中心となっている。",
-    "links": {
-      "homepage": "https://maps.gsi.go.jp/",
-      "github": "https://github.com/gsi-cyberjapan",
-      "docs": "https://maps.gsi.go.jp/development/"
-    }
-  },
-  {
     "title": "GTFS-JP",
     "category": "Open Data",
     "one_liner": "日本向けに拡張された公共交通データ標準。",
@@ -394,16 +342,6 @@ const projectsData = [
     "why_japan": "国土交通省などが策定した、日本のバス・鉄道向けGTFS拡張仕様。agency_jp.txtなど日本独自項目を定め、全国の公共交通オープンデータを国際仕様と両立させつつ日本語・行政手続きに対応させている。",
     "links": {
       "homepage": "https://www.gtfs.jp/"
-    }
-  },
-  {
-    "title": "TokyoGTFS",
-    "category": "Open Data",
-    "one_liner": "首都圏の公共交通GTFS整備・生成の試み。",
-    "description": "鉄道・バス事業者のデータを収集し、GTFS作成/更新の自動化を目指すツール群。地域横展開の参考事例。",
-    "why_japan": "海外開発者が東京の鉄道・バス情報を集約して作成したGTFSデータ生成OSS。東京の公共交通オープンデータを扱う実験的プロジェクトとして、日本のGTFS-JP普及初期の事例として参照されている。",
-    "links": {
-      "github": "https://github.com/MKuranowski/TokyoGTFS"
     }
   },
   {
@@ -440,31 +378,71 @@ const projectsData = [
       "docs": "https://dd2030.org/history/week11_20250528/polimoney"
     }
   },
+  {
+    "title": "GSI Maps（地理院地図）",
+    "category": "Open Data",
+    "one_liner": "国土地理院の地図タイル・ツール群の公開。",
+    "description": "多様な地理レイヤを提供し、災害情報から登山計画まで幅広く活用。開発者向けAPIやサンプルも整備されている。",
+    "why_japan": "国土地理院が提供するウェブ地図サービスで、地理院タイルや地図データをオンラインで無料公開。GitHub上のgsimapsリポジトリとしてOSS開発も行われ、日本の地理オープンデータの中心となっている。",
+    "links": {
+      "homepage": "https://maps.gsi.go.jp/",
+      "github": "https://github.com/gsi-cyberjapan",
+      "docs": "https://maps.gsi.go.jp/development/"
+    }
+  },
+  {
+    "title": "自治体標準オープンデータセット",
+    "category": "Open Data",
+    "one_liner": "自治体向けに項目や形式を標準化したテンプレ群。",
+    "description": "バス停、避難所、AED等の代表的データに標準仕様を提示。地域間の互換性と再利用性を高める取り組み。",
+    "why_japan": "デジタル庁が策定した自治体向け標準データ仕様群。公共施設一覧や人口などの形式を統一し、日本全国の自治体オープンデータを機械処理しやすくすることで、横断的な利活用を促進している。",
+    "links": {
+      "homepage": "https://www.digital.go.jp/policies/opendata/"
+    }
+  },
+  {
+    "title": "地方公共団体向けオープンデータパッケージ",
+    "category": "Open Data",
+    "one_liner": "自治体がすぐ始められるオープンデータ配布物。",
+    "description": "カタログ/サイト/ダッシュボードの雛形を含む。運用手順やチェックリストと併せて導入を支援する。",
+    "why_japan": "内閣官房IT総合戦略室がGitHubで公開した自治体向けOSSパッケージ。CKANベースのオープンデータカタログとダッシュボードを一括導入可能にし、日本の地方公共団体のオープンデータ公開を後押ししている。",
+    "links": {
+      "homepage": "https://www.code4japan.org/"
+    }
+  },
+  {
+    "title": "国会・府省会議 議事録メタデータ（NISTEP）",
+    "category": "Open Data",
+    "one_liner": "政府会議等の議事録メタデータを整理・公開。",
+    "description": "横断検索やリンクトデータ化を見据えた取り組み。研究・報道・政策分析の基盤として活用される。",
+    "why_japan": "文科省所管のNISTEPが公表した国会会議録・府省審議会議事録のメタデータセット。約4万5千件の議事録URL等をGitHubで公開し、日本の議会・行政プロセスの研究や透明性向上に貢献している。",
+    "links": {
+      "homepage": "https://www.nistep.go.jp/",
+      "github": "https://github.com/nistep"
+    }
+  },
+  {
+    "title": "SmartNews 国会議案データ",
+    "category": "Open Data",
+    "one_liner": "国会提出法案のデータ整備と公開。",
+    "description": "議案情報を機械可読に整理し、市民や研究者の二次利用を支援。可視化や検索のベースとして活用可能。",
+    "why_japan": "スマートニュース メディア研究所が衆参両院サイトから収集し、約2万件の国会議案データをGitHubでオープンデータ化。日本の立法動向を分析可能にし、報道機関や研究者の調査を支援している。",
+    "links": {
+      "github": "https://github.com/smartnews-politics"
+    }
+  },
+  {
+    "title": "TokyoGTFS",
+    "category": "Open Data",
+    "one_liner": "首都圏の公共交通GTFS整備・生成の試み。",
+    "description": "鉄道・バス事業者のデータを収集し、GTFS作成/更新の自動化を目指すツール群。地域横展開の参考事例。",
+    "why_japan": "海外開発者が東京の鉄道・バス情報を集約して作成したGTFSデータ生成OSS。東京の公共交通オープンデータを扱う実験的プロジェクトとして、日本のGTFS-JP普及初期の事例として参照されている。",
+    "links": {
+      "github": "https://github.com/MKuranowski/TokyoGTFS"
+    }
+  },
 
   // Open Government Projects
-  {
-    "title": "Decidim Japan",
-    "category": "Open Government",
-    "one_liner": "参加型民主主義プラットフォームの日本展開。",
-    "description": "住民提案・投票・フォーラム等を備えるCivicTech基盤。国内での導入検討と日本語化・運用知見が蓄積されている。",
-    "why_japan": "スペイン発DecidimをCode for Japanが日本向けにカスタマイズした日本版実装。中央省庁・自治体・大学など30以上の組織で実証利用され、日本における参加型民主主義プラットフォームとして定着しつつある。",
-    "links": {
-      "homepage": "https://www.code4japan.org/",
-      "github": "https://github.com/decidim/decidim",
-      "docs": "https://docs.decidim.org/"
-    }
-  },
-  {
-    "title": "FixMyStreet Japan",
-    "category": "Open Government",
-    "one_liner": "道路損傷など市民の通報を行政につなぐ仕組み。",
-    "description": "mySocietyのOSSをベースに日本向けに展開。Open311等の標準と連携し、課題の可視化と対応を促す。",
-    "why_japan": "英国発FixMyStreetをベースにCode for Japanらが日本向けに運営する通報プラットフォーム。道路の破損や街灯故障など地域課題をスマホから自治体へ届ける仕組みとして、日本各地の実証で活用されている。",
-    "links": {
-      "homepage": "https://fixmystreet.jp/",
-      "github": "https://github.com/mysociety/fixmystreet"
-    }
-  },
   {
     "title": "東京都 新型コロナ対策サイト",
     "category": "Open Government",
@@ -477,13 +455,15 @@ const projectsData = [
     }
   },
   {
-    "title": "sinsai.info",
+    "title": "Decidim Japan",
     "category": "Open Government",
-    "one_liner": "2011年の震災時に市民が情報集約した危機マッピング。",
-    "description": "Ushahidi基盤で被害報告を集約・可視化。オープンデータと市民協働の先行事例となった。",
-    "why_japan": "2011年東日本大震災発生直後にOSM Foundation Japanらが立ち上げた危機情報共有サイト。UshahidiとOpenStreetMapを用いて被災情報を集約し、日本の災害時オープンデータ／ボランティアGISの先駆けとなった。",
+    "one_liner": "参加型民主主義プラットフォームの日本展開。",
+    "description": "住民提案・投票・フォーラム等を備えるCivicTech基盤。国内での導入検討と日本語化・運用知見が蓄積されている。",
+    "why_japan": "スペイン発DecidimをCode for Japanが日本向けにカスタマイズした日本版実装。中央省庁・自治体・大学など30以上の組織で実証利用され、日本における参加型民主主義プラットフォームとして定着しつつある。",
     "links": {
-      "homepage": "http://sinsai.info/"
+      "homepage": "https://www.code4japan.org/",
+      "github": "https://github.com/decidim/decidim",
+      "docs": "https://docs.decidim.org/"
     }
   },
   {
@@ -510,6 +490,60 @@ const projectsData = [
     }
   },
   {
+    "title": "RESAS（地域経済分析システム）",
+    "category": "Open Government",
+    "one_liner": "国と自治体が地域経済をデータで分析・可視化できる公的プラットフォーム。",
+    "description": "人口動態、産業構造、観光、雇用などのビッグデータをダッシュボードで可視化。地方創生の政策立案をエビデンスベースで支援。API提供もあり、自治体や研究者が独自分析に活用できる。",
+    "why_japan": "内閣府と経済産業省が主導する日本の地方創生データ基盤。",
+    "links": {
+      "homepage": "https://resas.go.jp/",
+      "docs": "https://opendata.resas-portal.go.jp/"
+    }
+  },
+  {
+    "title": "PLATEAU",
+    "category": "Open Government",
+    "one_liner": "国土交通省が推進する3D都市モデルの整備・公開プロジェクト。",
+    "description": "全国の都市を3Dデータ化し、G空間情報として公開。都市計画、防災シミュレーション、スマートシティ実証に活用される。データはオープンデータとして提供され、民間の都市DX開発にも利用可能。",
+    "why_japan": "国土交通省が主導する日本の3D都市データ基盤プロジェクト。",
+    "links": {
+      "homepage": "https://www.mlit.go.jp/plateau/",
+      "github": "https://github.com/Project-PLATEAU"
+    }
+  },
+  {
+    "title": "FixMyStreet Japan",
+    "category": "Open Government",
+    "one_liner": "道路損傷など市民の通報を行政につなぐ仕組み。",
+    "description": "mySocietyのOSSをベースに日本向けに展開。Open311等の標準と連携し、課題の可視化と対応を促す。",
+    "why_japan": "英国発FixMyStreetをベースにCode for Japanらが日本向けに運営する通報プラットフォーム。道路の破損や街灯故障など地域課題をスマホから自治体へ届ける仕組みとして、日本各地の実証で活用されている。",
+    "links": {
+      "homepage": "https://fixmystreet.jp/",
+      "github": "https://github.com/mysociety/fixmystreet"
+    }
+  },
+  {
+    "title": "My City Report",
+    "category": "Open Government",
+    "one_liner": "市民がスマホで公共施設の不具合を自治体に通報できるアプリ（OSS）。",
+    "description": "千葉市が先駆的に導入し、道路の損傷、ゴミの不法投棄などを写真と位置情報で通報できる仕組み。オープンソース化され、複数の自治体に展開。CivicTechコミュニティとの協働で開発が進む。",
+    "why_japan": "千葉市が主導してOSS化し、国内複数自治体に展開。Code for Japanとの協働例も多い。",
+    "links": {
+      "homepage": "https://www.city.chiba.jp/shimin/shimin/kohokocho/my-city-report.html",
+      "github": "https://github.com/codeforjapan/mycityreport"
+    }
+  },
+  {
+    "title": "sinsai.info",
+    "category": "Open Government",
+    "one_liner": "2011年の震災時に市民が情報集約した危機マッピング。",
+    "description": "Ushahidi基盤で被害報告を集約・可視化。オープンデータと市民協働の先行事例となった。",
+    "why_japan": "2011年東日本大震災発生直後にOSM Foundation Japanらが立ち上げた危機情報共有サイト。UshahidiとOpenStreetMapを用いて被災情報を集約し、日本の災害時オープンデータ／ボランティアGISの先駆けとなった。",
+    "links": {
+      "homepage": "http://sinsai.info/"
+    }
+  },
+  {
     "title": "PoliPoli Gov",
     "category": "Open Government",
     "one_liner": "自治体向け市民参加プラットフォーム。",
@@ -531,16 +565,6 @@ const projectsData = [
     }
   },
   {
-    "title": "my groove さんだ",
-    "category": "Open Government",
-    "one_liner": "兵庫県三田市の市民協働アプリ。",
-    "description": "市民が地域の課題や提案を投稿し、行政や他市民とコミュニケーションできるプラットフォーム。三田市とCivicWave（Civictechスタートアップ）が開発。OSS化の検討が進められている。",
-    "why_japan": "兵庫県三田市が主体となり、国内Civictechコミュニティと協働で開発。",
-    "links": {
-      "homepage": "https://mygroove.city.sanda.lg.jp/"
-    }
-  },
-  {
     "title": "自治体議会会議録検索システム",
     "category": "Open Government",
     "one_liner": "多くの自治体で導入されている議会議事録の横断検索システム。",
@@ -548,17 +572,6 @@ const projectsData = [
     "why_japan": "全国市議会議長会が標準化・推進する日本の議会デジタル化の基盤。",
     "links": {
       "homepage": "https://www.si-gichokai.jp/"
-    }
-  },
-  {
-    "title": "My City Report",
-    "category": "Open Government",
-    "one_liner": "市民がスマホで公共施設の不具合を自治体に通報できるアプリ（OSS）。",
-    "description": "千葉市が先駆的に導入し、道路の損傷、ゴミの不法投棄などを写真と位置情報で通報できる仕組み。オープンソース化され、複数の自治体に展開。CivicTechコミュニティとの協働で開発が進む。",
-    "why_japan": "千葉市が主導してOSS化し、国内複数自治体に展開。Code for Japanとの協働例も多い。",
-    "links": {
-      "homepage": "https://www.city.chiba.jp/shimin/shimin/kohokocho/my-city-report.html",
-      "github": "https://github.com/codeforjapan/mycityreport"
     }
   },
   {
@@ -572,14 +585,13 @@ const projectsData = [
     }
   },
   {
-    "title": "RESAS（地域経済分析システム）",
+    "title": "my groove さんだ",
     "category": "Open Government",
-    "one_liner": "国と自治体が地域経済をデータで分析・可視化できる公的プラットフォーム。",
-    "description": "人口動態、産業構造、観光、雇用などのビッグデータをダッシュボードで可視化。地方創生の政策立案をエビデンスベースで支援。API提供もあり、自治体や研究者が独自分析に活用できる。",
-    "why_japan": "内閣府と経済産業省が主導する日本の地方創生データ基盤。",
+    "one_liner": "兵庫県三田市の市民協働アプリ。",
+    "description": "市民が地域の課題や提案を投稿し、行政や他市民とコミュニケーションできるプラットフォーム。三田市とCivicWave（Civictechスタートアップ）が開発。OSS化の検討が進められている。",
+    "why_japan": "兵庫県三田市が主体となり、国内Civictechコミュニティと協働で開発。",
     "links": {
-      "homepage": "https://resas.go.jp/",
-      "docs": "https://opendata.resas-portal.go.jp/"
+      "homepage": "https://mygroove.city.sanda.lg.jp/"
     }
   },
   {
@@ -590,17 +602,6 @@ const projectsData = [
     "why_japan": "石川県とCode for Kanazawaが協働で開発した地域データ可視化の先行事例。",
     "links": {
       "homepage": "https://www.pref.ishikawa.lg.jp/"
-    }
-  },
-  {
-    "title": "PLATEAU",
-    "category": "Open Government",
-    "one_liner": "国土交通省が推進する3D都市モデルの整備・公開プロジェクト。",
-    "description": "全国の都市を3Dデータ化し、G空間情報として公開。都市計画、防災シミュレーション、スマートシティ実証に活用される。データはオープンデータとして提供され、民間の都市DX開発にも利用可能。",
-    "why_japan": "国土交通省が主導する日本の3D都市データ基盤プロジェクト。",
-    "links": {
-      "homepage": "https://www.mlit.go.jp/plateau/",
-      "github": "https://github.com/Project-PLATEAU"
     }
   },
   {
